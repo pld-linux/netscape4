@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Netscape Communicator
 Comment=Netscape Communicator World Wide Web Browser, E-mail and News client
-Exec=/usr/bin/netscape-communicator
+Exec=/usr/X11R6/bin/netscape-communicator
 Icon=netscape.png
 Terminal=0
 Type=Application
