@@ -4,7 +4,7 @@ Name:		netscape
 Version:	4.73
 %define _shortver 473
 %define _registry %{version}.0.20000502
-Release:	1
+Release:	2
 Copyright:	Free
 Group:		X11/Applications/Networking
 Group(pl):	X11/Aplikacje/Sieciowe
@@ -96,7 +96,7 @@ rmdir communicator*
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_bindir}
 install -d $RPM_BUILD_ROOT%{_libdir}/netscape/{plugins,java/classes}
-install -d $RPM_BUILD_ROOT%{_applnkdir}/Networking/WWW
+install -d $RPM_BUILD_ROOT%{_applnkdir}/Network/WWW
 
 for I in *.nif; do
 	tar -C $RPM_BUILD_ROOT%{_libdir}/netscape -xzvf $I
@@ -116,8 +116,8 @@ tar xvzf navigator*/netscape-v%{_shortver}.nif netscape
 install -s netscape $RPM_BUILD_ROOT%{_libdir}/netscape/netscape-navigator
 install %{SOURCE2} $RPM_BUILD_ROOT%{_bindir}/netscape
 
-install %{SOURCE3} $RPM_BUILD_ROOT%{_applnkdir}/Networking/WWW
-install %{SOURCE4} $RPM_BUILD_ROOT%{_applnkdir}/Networking/WWW
+install %{SOURCE3} $RPM_BUILD_ROOT%{_applnkdir}/Network/WWW
+install %{SOURCE4} $RPM_BUILD_ROOT%{_applnkdir}/Network/WWW
 
 mv $RPM_BUILD_ROOT%{_libdir}/netscape/libnullplugin-dynMotif.so \
    $RPM_BUILD_ROOT%{_libdir}/netscape/plugins
@@ -156,12 +156,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %files navigator
 %defattr(644,root,root,755)
-%{_applnkdir}/Networking/WWW/netscape-navigator.desktop
+%{_applnkdir}/Network/WWW/netscape-navigator.desktop
 %attr(755,root,root) %{_bindir}/netscape-navigator
 %attr(755,root,root) %{_libdir}/netscape/netscape-navigator
 
 %files communicator
 %defattr(644,root,root,755)
-%{_applnkdir}/Networking/WWW/netscape-communicator.desktop
+%{_applnkdir}/Network/WWW/netscape-communicator.desktop
 %attr(755,root,root) %{_bindir}/netscape-communicator
 %attr(755,root,root) %{_libdir}/netscape/netscape-communicator
