@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=Netscape Navigator
 Comment=Netscape Navigator World Wide Web Browser
+Comment[pl]=Przeglądarka WWW Netscape Navigator
 Exec=/usr/X11R6/bin/netscape -NAVIGATOR
 Icon=netscape.png
 Terminal=0
