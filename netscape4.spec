@@ -473,18 +473,18 @@ rm -rf $RPM_BUILD_ROOT
 %lang(ru) %{_libdir}/X11/app-defaults/ru/Netscape
 %lang(zh_CN) %{_libdir}/X11/app-defaults/zh_CN/Netscape
 %lang(zh_TW) %{_libdir}/X11/app-defaults/zh_TW/Netscape
-%{_pixmapsdir}/netscape.png
+%{_pixmapsdir}/netscape4.png
 
 %ifarch %{ix86}
 %files navigator
 %defattr(644,root,root,755)
-%{_desktopdir}/netscape-navigator.desktop
+%{_desktopdir}/netscape4-navigator.desktop
 %attr(755,root,root) %{_bindir}/netscape-navigator
 %attr(755,root,root) %{_libdir}/netscape/netscape-navigator
 %endif
 
 %files communicator
 %defattr(644,root,root,755)
-%{_desktopdir}/netscape-communicator.desktop
+%{_desktopdir}/netscape4-communicator.desktop
 %attr(755,root,root) %{_bindir}/netscape-communicator
 %attr(755,root,root) %{_libdir}/netscape/netscape-communicator
