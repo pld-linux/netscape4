@@ -7,6 +7,7 @@ Version:	4.8
 %define _shortver 48
 %define _registry %{version}.0.20020722
 Release:	4
+Epoch:		1
 License:	distributable
 Group:		X11/Applications/Networking
 Source0:	ftp://ftp.netscape.com/pub/communicator/english/%{version}/unix/supported/linux22/complete_install/communicator-v%{_shortver}-us.x86-unknown-linux2.2.tar.gz
