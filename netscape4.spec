@@ -95,29 +95,29 @@ rmdir communicator*
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT/usr/bin
-install -d $RPM_BUILD_ROOT/usr/lib/netscape/{plugins,java/classes}
+install -d $RPM_BUILD_ROOT%{_libdir}/netscape/{plugins,java/classes}
 install -d $RPM_BUILD_ROOT/etc/X11/wmconfig
 
 for I in *.nif; do
-	tar -C $RPM_BUILD_ROOT/usr/lib/netscape -xzvf $I
+	tar -C $RPM_BUILD_ROOT%{_libdir}/netscape -xzvf $I
 done
 
-mv $RPM_BUILD_ROOT/usr/lib/netscape/netscape $RPM_BUILD_ROOT/usr/lib/netscape/netscape-communicator
-cp -a vreg $RPM_BUILD_ROOT/usr/lib/netscape
-cp -a *.jar $RPM_BUILD_ROOT/usr/lib/netscape/java/classes
-echo 'Communicator,4.04.0.97310,/usr/lib/netscape' > /tmp/infile
-./vreg $RPM_BUILD_ROOT/usr/lib/netscape/registry /tmp/infile
+mv $RPM_BUILD_ROOT%{_libdir}/netscape/netscape $RPM_BUILD_ROOT/usr/lib/netscape/netscape-communicator
+cp -a vreg $RPM_BUILD_ROOT%{_libdir}/netscape
+cp -a *.jar $RPM_BUILD_ROOT%{_libdir}/netscape/java/classes
+echo 'Communicator,4.04.0.97310,%{_libdir}/netscape' > /tmp/infile
+./vreg $RPM_BUILD_ROOT%{_libdir}/netscape/registry /tmp/infile
 rm -f /tmp/infile
 
 # get the netscape-navigator binary now
 tar xvzf %{SOURCE1} '*/netscape-v405.nif'
 tar xvzf navigator*/netscape-v405.nif netscape
 
-install -s netscape $RPM_BUILD_ROOT/usr/lib/netscape/netscape-navigator
+install -s netscape $RPM_BUILD_ROOT%{_libdir}/netscape/netscape-navigator
 install -s $RPM_SOURCE_DIR/netscape-com.sh $RPM_BUILD_ROOT/usr/bin/netscape
 
-mv $RPM_BUILD_ROOT/usr/lib/netscape/libnullplugin-dynMotif.so \
-   $RPM_BUILD_ROOT/usr/lib/netscape/plugins
+mv $RPM_BUILD_ROOT%{_libdir}/netscape/libnullplugin-dynMotif.so \
+   $RPM_BUILD_ROOT%{_libdir}/netscape/plugins
 
 ln -s ../lib/netscape/netscape-navigator $RPM_BUILD_ROOT/usr/bin/netscape-navigator
 ln -s ../lib/netscape/netscape-communicator $RPM_BUILD_ROOT/usr/bin/netscape-communicator
@@ -129,13 +129,13 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644, root, root, 755)
 
 %doc README LICENSE Netscape.ad
-%docdir /usr/lib/netscape/nethelp
+%docdir %{_libdir}/netscape/nethelp
 
-%dir /usr/lib/netscape
-%dir /usr/lib/netscape/plugins
+%dir %{_libdir}/netscape
+%dir %{_libdir}/netscape/plugins
 
 %attr(755, root, root) /usr/bin/netscape
-/usr/lib/netscape/*
+%{_libdir}/netscape/*
 
 %files navigator
 %defattr(644, root, root, 755)
