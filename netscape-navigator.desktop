@@ -41,5 +41,6 @@ Comment[zh_TW]=Netscape 瀏覽器
 Exec=/usr/bin/netscape -NAVIGATOR
 Icon=netscape.png
 Terminal=0
+Categories=Network;WebBrowser
 Type=Application
 # vi: encoding=utf-8

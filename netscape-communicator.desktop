@@ -10,5 +10,6 @@ Comment[uk]=Netscape Communicator - World Wide Web браузер, клієнт 
 Exec=/usr/bin/netscape -COMMUNICATOR
 Icon=netscape.png
 Terminal=0
+Categories=Network
 Type=Application
 # vi: encoding=utf-8
