@@ -108,8 +108,8 @@ echo 'Communicator,4.72.0.20000131,%{_libdir}/netscape' > /tmp/infile
 rm -f /tmp/infile
 
 # get the netscape-navigator binary now
-tar xvzf %{SOURCE1} '*/netscape-v47.nif'
-tar xvzf navigator*/netscape-v47.nif netscape
+tar xvzf %{SOURCE1} '*/netscape-v472.nif'
+tar xvzf navigator*/netscape-v472.nif netscape
 
 install -s netscape $RPM_BUILD_ROOT%{_libdir}/netscape/netscape-navigator
 install %{SOURCE2} $RPM_BUILD_ROOT%{_bindir}/netscape
