@@ -3,9 +3,6 @@ Summary(pl):	Netscape Navigator i Communicator
 Summary(ru):	Netscape Navigator и Communicator
 Summary(uk):	Netscape Navigator та Communicator
 Name:		netscape
-%ifarch ppc
-Version:	4.73
-%endif
 Version:	4.8
 %define _shortver 48
 %define _registry %{version}.0.20020722
