@@ -1,8 +1,8 @@
 Summary:	Netscape navigator and communicator
 Summary(pl):	Netscape Navigator i Communicator
 Name:		netscape
-Version:	4.76
-%define _shortver 476
+Version:	4.77
+%define _shortver 477
 %define _registry %{version}.0.20001007
 Release:	1
 Copyright:	Free
