@@ -3,18 +3,18 @@ Summary(pl):	Netscape Navigator i Communicator
 Summary(ru):	Netscape Navigator É Communicator
 Summary(uk):	Netscape Navigator ÔÁ Communicator
 Name:		netscape
-Version:	4.79
-%define _shortver 479
-%define _registry %{version}.0.20011017
+Version:	4.8
+%define _shortver 48
+%define _registry %{version}.0.20020722
 Release:	4
 License:	distributable
 Group:		X11/Applications/Networking
 Source0:	ftp://ftp.netscape.com/pub/communicator/english/%{version}/unix/supported/linux22/complete_install/communicator-v%{_shortver}-us.x86-unknown-linux2.2.tar.gz
-# Source0-md5:	d57e2faf8ff8c8a75d3214a268f65050
+# Source0-md5:	e131bf86a7ef03dc31e502a3184c9f56
 Source1:	ftp://ftp.netscape.com/pub/communicator/english/%{version}/unix/supported/linux22/navigator_standalone/navigator-v%{_shortver}-us.x86-unknown-linux2.2.tar.gz
-# Source1-md5:	40981cdbd2bf67eb2846e19966c0e3ec
+# Source1-md5:	ec54ef40eb1be523139a5fe9fb28513f
 Source20:	communicator-v473.ppclinux.tar.gz
-#Source20-md5:	48fd4563bdac71276e7a75b9f717cb94
+# Source20-md5:	48fd4563bdac71276e7a75b9f717cb94
 Source2:	%{name}.sh
 Source3:	%{name}-communicator.desktop
 Source4:	%{name}-navigator.desktop
@@ -40,9 +40,11 @@ Source18:	Netscape.ad.zh_CN
 Source19:	Netscape.ad.zh_TW
 # Source19-md5:	7340e80bbfb76f45aa80da783fc0eb18
 Requires:	lesstif
-BuildRequires:	compat-libstdc++-2.9
 ExclusiveArch:	%{ix86} ppc
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%define		_prefix		/usr/X11R6
+%define		_mandir		%{_prefix}/man
 
 %description
 Netscape Navigator and Communicator.
@@ -177,7 +179,7 @@ Communicator'ÏÍ.
 %package communicator
 Summary:	Netscape Communicator internet browser, news reader, and mail client
 Summary(cs):	WWW prohlí¾eè Netscape Communicator, po¹tovní a NetNews klient
-Summary(de):	Netscape Communicator Internet Browser, Newsreader und  Mail-Client
+Summary(de):	Netscape Communicator Internet Browser, Newsreader und Mail-Client
 Summary(es):	Juego de herramientas Netscape Communicator
 Summary(fr):	Netscape Communicator, navigateur Internet, lecteur de news et client courrier
 Summary(it):	Gamma di tool di Netscape Communicator
@@ -432,7 +434,7 @@ install %{SOURCE19} $RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/zh_TW/Netscape
 %ifarch %{ix86}
 ln -sf ../lib/netscape/netscape-navigator $RPM_BUILD_ROOT%{_bindir}/netscape-navigator
 mv -f $RPM_BUILD_ROOT%{_libdir}/netscape/libnullplugin-dynMotif.so \
-   $RPM_BUILD_ROOT%{_libdir}/netscape/plugins
+	$RPM_BUILD_ROOT%{_libdir}/netscape/plugins
 mv -f $RPM_BUILD_ROOT%{_libdir}/netscape/{README,LICENSE} \
 	$RPM_BUILD_DIR/%{name}-%{version}/
 mv -f $RPM_BUILD_ROOT%{_libdir}/netscape/Netscape.ad \
