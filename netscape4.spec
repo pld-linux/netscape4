@@ -14,7 +14,7 @@ Release:	4
 Epoch:		1
 License:	distributable
 Group:		X11/Applications/Networking
-#Source0:	ftp://ftp.netscape.com/pub/communicator/english/%{version}/unix/supported/linux22/complete_install/communicator-v%{_shortver}-us.x86-unknown-linux2.2.tar.gz
+Source0:	ftp://ftp.netscape.com/pub/communicator/english/%{version}/unix/supported/linux22/complete_install/communicator-v%{_shortver}-us.x86-unknown-linux2.2.tar.gz
 # Source0-md5:	e131bf86a7ef03dc31e502a3184c9f56
 Source1:	ftp://ftp.netscape.com/pub/communicator/english/%{version}/unix/supported/linux22/navigator_standalone/navigator-v%{_shortver}-us.x86-unknown-linux2.2.tar.gz
 # Source1-md5:	ec54ef40eb1be523139a5fe9fb28513f
