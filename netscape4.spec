@@ -16,6 +16,9 @@ Source4:	netscape-navigator.desktop
 Exclusivearch:	%{ix86}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
+%define		_prefix		/usr/X11R6
+%define		_mandir		%{_prefix}/man
+
 %description
 Netscape navigator and communicator.
 
@@ -48,11 +51,11 @@ Requires:	netscape-common
 
 %description communicator
 Netscape Communicator is the industry-leading web browser. It supports
-the latest HTML standards, Java, and JavaScript. It also includes 
+the latest HTML standards, Java, and JavaScript. It also includes
 full-featured Usenet news reader as well as a complete email client.
 
-Information on the Netscape Communicator license may be found in the file
-%{_docdir}/%{name}-common-%{version}/LICENSE.
+Information on the Netscape Communicator license may be found in the
+file %{_docdir}/%{name}-common-%{version}/LICENSE.
 
 %description -l pl
 Netscape Communicator to potê¿na przegl±darka WWW. Obs³uguje najnowsze
@@ -74,7 +77,7 @@ Requires:	netscape-common
 
 %description navigator
 Netscape Navigator is the industry-leading web browser. It supports
-the latest HTML standards, Java, and JavaScript. It also includes 
+the latest HTML standards, Java, and JavaScript. It also includes
 full-featured Usenet news reader as well as a complete email client.
 
 Information on the Netscape Navigator license may be found in the file
