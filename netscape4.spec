@@ -9,15 +9,12 @@ Version:	4.79
 Release:	4
 License:	distributable
 Group:		X11/Applications/Networking
-%ifarch %{ix86}
 Source0:	ftp://ftp.netscape.com/pub/communicator/english/%{version}/unix/supported/linux22/complete_install/communicator-v%{_shortver}-us.x86-unknown-linux2.2.tar.gz
 # Source0-md5:	d57e2faf8ff8c8a75d3214a268f65050
 Source1:	ftp://ftp.netscape.com/pub/communicator/english/%{version}/unix/supported/linux22/navigator_standalone/navigator-v%{_shortver}-us.x86-unknown-linux2.2.tar.gz
 # Source1-md5:	40981cdbd2bf67eb2846e19966c0e3ec
-%endif
-%ifarch ppc
-Source0:	communicator-v473.ppclinux.tar.gz
-%endif
+Source20:	communicator-v473.ppclinux.tar.gz
+#Source20-md5:	48fd4563bdac71276e7a75b9f717cb94
 Source2:	%{name}.sh
 Source3:	%{name}-communicator.desktop
 Source4:	%{name}-navigator.desktop
