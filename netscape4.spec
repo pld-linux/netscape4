@@ -4,7 +4,7 @@ Name:		netscape
 Version:	4.79
 %define _shortver 479
 %define _registry %{version}.0.20001007
-Release:	2
+Release:	3
 License:	distributable
 Group:		X11/Applications/Networking
 Source0:	ftp://ftp.netscape.com/pub/communicator/english/%{version}/unix/supported/linux22/complete_install/communicator-v%{_shortver}-us.x86-unknown-linux2.2.tar.gz
@@ -12,6 +12,7 @@ Source1:	ftp://ftp.netscape.com/pub/communicator/english/%{version}/unix/support
 Source2:	%{name}.sh
 Source3:	%{name}-communicator.desktop
 Source4:	%{name}-navigator.desktop
+Source5:	%{name}.png
 Source10:	Netscape.ad.de
 Source11:	Netscape.ad.es
 Source12:	Netscape.ad.fr
@@ -109,7 +110,7 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_bindir} \
 	$RPM_BUILD_ROOT%{_libdir}/netscape/{plugins,java/classes} \
 	$RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/{de,es,fr,ja,ko,pl,pt_BR,ru,zh_{CN,TW}} \
-	$RPM_BUILD_ROOT%{_applnkdir}/Network/WWW
+	$RPM_BUILD_ROOT{%{_applnkdir}/Network/WWW,{_pixmapsdir}}
 
 for I in *.nif; do
 	tar -C $RPM_BUILD_ROOT%{_libdir}/netscape -xzvf $I
@@ -130,6 +131,7 @@ install netscape $RPM_BUILD_ROOT%{_libdir}/netscape/netscape-navigator
 install %{SOURCE2} $RPM_BUILD_ROOT%{_bindir}/netscape
 
 install %{SOURCE3} %{SOURCE4} $RPM_BUILD_ROOT%{_applnkdir}/Network/WWW
+install %{SOURCE5} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 install %{SOURCE10} $RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/de/Netscape
 install %{SOURCE11} $RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/es/Netscape
@@ -192,6 +194,7 @@ rm -rf $RPM_BUILD_ROOT
 %lang(ru) %{_libdir}/X11/app-defaults/ru/Netscape
 %lang(zh_CN) %{_libdir}/X11/app-defaults/zh_CN/Netscape
 %lang(zh_TW) %{_libdir}/X11/app-defaults/zh_TW/Netscape
+%{_pixmapsdir}/netscape.png
 
 %files navigator
 %defattr(644,root,root,755)
