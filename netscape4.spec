@@ -1,11 +1,11 @@
 Summary:	Netscape navigator and communicator
 Summary(pl):	Netscape Navigator i Communicator
 Name:		netscape
-Version:	4.77
-%define _shortver 477
+Version:	4.79
+%define _shortver 479
 %define _registry %{version}.0.20001007
-Release:	3
-Copyright:	Free
+Release:	1
+License:	distributable
 Group:		X11/Applications/Networking
 Group(de):	X11/Applikationen/Netzwerkwesen
 Group(pl):	X11/Aplikacje/Sieciowe
