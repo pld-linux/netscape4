@@ -1,15 +1,15 @@
 Summary:	Netscape navigator and communicator
 Summary(pl):	Netscape Navigator i Communicator
 Name:		netscape
-Version:	4.74
-%define _shortver 474
-%define _registry %{version}.0.20000707
+Version:	4.75
+%define _shortver 475
+%define _registry %{version}.0.20000814
 Release:	1
 Copyright:	Free
 Group:		X11/Applications/Networking
 Group(pl):	X11/Aplikacje/Sieciowe
-Source0:	ftp://ftp.netscape.com/pub/communicator/english/%{version}/unix/unsupported/linux22/complete_install/communicator-v%{_shortver}-us.x86-unknown-linux2.2.tar.gz
-Source1:	ftp://ftp.netscape.com/pub/communicator/english/%{version}/unix/unsupported/linux22/navigator_standalone/navigator-v%{_shortver}-us.x86-unknown-linux2.2.tar.gz
+Source0:	ftp://ftp.netscape.com/pub/communicator/english/%{version}/unix/supported/linux22/complete_install/communicator-v%{_shortver}-us.x86-unknown-linux2.2.tar.gz
+Source1:	ftp://ftp.netscape.com/pub/communicator/english/%{version}/unix/supported/linux22/navigator_standalone/navigator-v%{_shortver}-us.x86-unknown-linux2.2.tar.gz
 Source2:	netscape.sh
 Source3:	netscape-communicator.desktop
 Source4:	netscape-navigator.desktop
