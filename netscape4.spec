@@ -152,31 +152,3 @@ rm -rf $RPM_BUILD_ROOT
 
 /%attr(755,root,root) usr/bin/netscape-communicator
 /%attr(755,root,root) usr/lib/netscape/netscape-communicator
-
-%changelog
-* Sun Feb  7 1999 Micha³ Kuratczyk <kurkens@polbox.com>
-- added pl translations
-- moved %changelog to the end of spec
-- added using "install -d" instead "mkdir -p"
-- simpilification in %install
-- rewrote %files sections
-- cosmetic changes
-
-* Thu May 07 1998 Prospector System <bugs@redhat.com>
-
-- translations modified for de, fr, tr
-
-* Thu May 07 1998 Cristian Gafton <gafton@redhat.com>
-- made the package ExclusiveArch: i386
-
-* Mon May 04 1998 Erik Troan <ewt@redhat.com>
-- added LANG=C to netscape start wrapper
-
-* Thu Apr 02 1998 Erik Troan <ewt@redhat.com>
-- update to netscape 4.05
-- moved common files to netscape-common package which both navigator and
-  communicator require
-- made relocateable (needs RPM >= 2.4.103 to relocate properly)
-
-* Fri Jan 23 1998 Erik Troan <ewt@redhat.com>
-- initial package is rel 3, works on RH 4.x and RH 5.x
