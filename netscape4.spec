@@ -53,7 +53,7 @@ Wspólne pliki dla przegl±darki Navigator i pakietu Communicator.
 %package communicator
 Summary:	Netscape Communicator internet browser, news reader, and mail client
 Summary(fr):	Netscape Communicator, navigateur Internet, lecteur de news et client courrier.
-Summary(de):	Netscape Communicator Internet Browser, Newsreader und  Mail-Client  
+Summary(de):	Netscape Communicator Internet Browser, Newsreader und  Mail-Client
 Summary(pl):	Netscape Communicator - przegl±darka WWW, czytnik news oraz program pocztowy
 Summary(tr):	Netscape Communicator tarayýcý, haber okuyucu ve e-posta istemcisi
 Group:		X11/Applications/Networking
@@ -78,8 +78,8 @@ Informacje na temat licencji mo¿na znale¼æ w pliku
 %package navigator
 Summary:	Netscape Navigator internet browser
 Summary(fr):	Navigateur internet de Netscape
-Summary(de):	Netscape-Navigator-Internet-Browser 
-Summary(pl):	Netscape Navigator - przegl±darka WWW 
+Summary(de):	Netscape-Navigator-Internet-Browser
+Summary(pl):	Netscape Navigator - przegl±darka WWW
 Summary(tr):	Netscape Navigator web tarayýcý
 Group:		X11/Applications/Networking
 Requires:	netscape-common
