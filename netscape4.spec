@@ -4,7 +4,7 @@ Name:		netscape
 Version:	4.75
 %define _shortver 475
 %define _registry %{version}.0.20000814
-Release:	1
+Release:	2
 Copyright:	Free
 Group:		X11/Applications/Networking
 Group(pl):	X11/Aplikacje/Sieciowe
