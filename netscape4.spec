@@ -1,13 +1,15 @@
 Summary:	Netscape navigator and communicator
 Summary(pl):	Netscape Navigator i Communicator
 Name:		netscape
-Version:	4.72
-Release:	2
+Version:	4.73
+%define _shortver 473
+%define _registry %{version}.0.20000502
+Release:	1
 Copyright:	Free
 Group:		X11/Applications/Networking
 Group(pl):	X11/Aplikacje/Sieciowe
-Source0:	ftp://ftp.netscape.com/pub/communicator/english/4.72/unix/unsupported/linux22/complete_install/communicator-v472-export.x86-unknown-linux2.2.tar.gz
-Source1:	ftp://ftp.netscape.com/pub/communicator/english/4.72/unix/unsupported/linux22/navigator_standalone/navigator-v472-export.x86-unknown-linux2.2.tar.gz
+Source0:	ftp://ftp.netscape.com/pub/communicator/english/%{version}/unix/unsupported/linux22/complete_install/communicator-v%{_shortver}-export.x86-unknown-linux2.2.tar.gz
+Source1:	ftp://ftp.netscape.com/pub/communicator/english/%{version}/unix/unsupported/linux22/navigator_standalone/navigator-v%{_shortver}-export.x86-unknown-linux2.2.tar.gz
 Source2:	netscape.sh
 Source3:	netscape-communicator.desktop
 Source4:	netscape-navigator.desktop
@@ -32,7 +34,7 @@ Files shared between the Netscape Navigator and Netscape Communicator.
 web browsers.
 
 %description -l pl
-Pliki dzielone miêdzy przegl±dark± Navigator i pakietem Communicator.
+Wspólne pliki dla przegl±darki Navigator i pakietu Communicator.
 
 %package communicator
 Summary:	Netscape Communicator internet browser, news reader, and mail client
@@ -50,7 +52,7 @@ the latest HTML standards, Java, and JavaScript. It also includes
 full-featured Usenet news reader as well as a complete email client.
 
 Information on the Netscape Communicator license may be found in the file
-/usr/doc/netscape-%{PACKAGE_RELEASE}-%{PACKAGE_RELEASE}/LICENSE.update.
+%{_docdir}/%{name}-common-%{version}/LICENSE.
 
 %description -l pl
 Netscape Communicator to potê¿na przegl±darka WWW. Obs³uguje najnowsze
@@ -58,7 +60,7 @@ standardy HTML, Java i JavaScript. Zawiera tak¿e w pe³ni funkcjonalny
 czytnik grup dyskusyjnych oraz program pocztowy.
 
 Informacje na temat licencji mo¿na znale¼æ w pliku
-/usr/doc/netscape-%{PACKAGE_RELEASE}-%{PACKAGE_RELEASE}/LICENSE.update.
+%{_docdir}/%{name}-common-%{version}/LICENSE.
 
 %package navigator
 Summary:	Netscape Navigator internet browser
@@ -76,14 +78,14 @@ the latest HTML standards, Java, and JavaScript. It also includes
 full-featured Usenet news reader as well as a complete email client.
 
 Information on the Netscape Navigator license may be found in the file
-/usr/doc/netscape-%{PACKAGE_RELEASE}-%{PACKAGE_RELEASE}/LICENSE.update.
+%{_docdir}/%{name}-common-%{version}/LICENSE.
 
 %description -l pl
 Netscape Navigator to potê¿na przegl±darka WWW. Obs³uguje najnowsze
 standardy HTML, Java i JavaScript.
 
 Informacje na temat licencji mo¿na znale¼æ w pliku
-/usr/doc/netscape-%{PACKAGE_RELEASE}-%{PACKAGE_RELEASE}/LICENSE.update.
+%{_docdir}/%{name}-common-%{version}/LICENSE.
 
 %prep
 %setup -c -q
@@ -103,13 +105,13 @@ done
 mv $RPM_BUILD_ROOT%{_libdir}/netscape/netscape $RPM_BUILD_ROOT%{_libdir}/netscape/netscape-communicator
 cp -a vreg $RPM_BUILD_ROOT%{_libdir}/netscape
 cp -a *.jar $RPM_BUILD_ROOT%{_libdir}/netscape/java/classes
-echo 'Communicator,4.72.0.20000131,%{_libdir}/netscape' > /tmp/infile
+echo "Communicator,%_registry,%{_libdir}/netscape" > /tmp/infile
 ./vreg $RPM_BUILD_ROOT%{_libdir}/netscape/registry /tmp/infile
 rm -f /tmp/infile
 
 # get the netscape-navigator binary now
-tar xvzf %{SOURCE1} '*/netscape-v472.nif'
-tar xvzf navigator*/netscape-v472.nif netscape
+tar xvzf %{SOURCE1} '*/netscape-v%{_shortver}.nif'
+tar xvzf navigator*/netscape-v%{_shortver}.nif netscape
 
 install -s netscape $RPM_BUILD_ROOT%{_libdir}/netscape/netscape-navigator
 install %{SOURCE2} $RPM_BUILD_ROOT%{_bindir}/netscape
@@ -131,14 +133,26 @@ rm -rf $RPM_BUILD_ROOT
 
 %files common
 %defattr(644,root,root,755)
-
 %doc README LICENSE Netscape.ad
 %docdir %{_libdir}/netscape/nethelp
-
 %dir %{_libdir}/netscape
-
+%dir %{_libdir}/netscape/nethelp
+%dir %{_libdir}/netscape/java
+%dir %{_libdir}/netscape/spell
+%dir %{_libdir}/netscape/plugins
+%dir %{_libdir}/netscape/movemail-src
+%{_libdir}/netscape/XKeysymDB
+%{_libdir}/netscape/bookmark.htm
+%{_libdir}/netscape/movemail
+%{_libdir}/netscape/*.so
+%{_libdir}/netscape/registry
+%{_libdir}/netscape/vreg
+%{_libdir}/netscape/nethelp/*
+%{_libdir}/netscape/java/*
+%{_libdir}/netscape/spell/*
+%{_libdir}/netscape/plugins/*
+%{_libdir}/netscape/movemail-src/*
 %attr(755,root,root) %{_bindir}/netscape
-%{_libdir}/netscape/*
 
 %files navigator
 %defattr(644,root,root,755)
