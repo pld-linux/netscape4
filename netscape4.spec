@@ -4,7 +4,7 @@ Name:		netscape
 Version:	4.75
 %define _shortver 475
 %define _registry %{version}.0.20000814
-Release:	2
+Release:	3
 Copyright:	Free
 Group:		X11/Applications/Networking
 Group(pl):	X11/Aplikacje/Sieciowe
@@ -146,14 +146,16 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_libdir}/netscape/movemail-src
 %{_libdir}/netscape/XKeysymDB
 %{_libdir}/netscape/bookmark.htm
-%{_libdir}/netscape/movemail
-%{_libdir}/netscape/*.so
+%attr(755,root,root) %{_libdir}/netscape/movemail
+%attr(755,root,root) %{_libdir}/netscape/*.so
 %{_libdir}/netscape/registry
 %{_libdir}/netscape/vreg
 %{_libdir}/netscape/nethelp/*
 %{_libdir}/netscape/java/*
 %{_libdir}/netscape/spell/*
-%{_libdir}/netscape/plugins/*
+%{_libdir}/netscape/plugins/*.class
+%{_libdir}/netscape/plugins/*.jar
+%attr(755,root,root) %{_libdir}/netscape/plugins/*.so
 %{_libdir}/netscape/movemail-src/*
 %attr(755,root,root) %{_bindir}/netscape
 
