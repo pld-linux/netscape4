@@ -1,6 +1,6 @@
 #!/bin/sh
 
-PREFIX="/usr/X11R6"
+PREFIX="/usr"
 
 MOZILLA_HOME=${PREFIX}/lib/netscape
 export MOZILLA_HOME
