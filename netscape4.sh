@@ -1,29 +1,30 @@
 #!/bin/sh
 
-PREFIX=/usr/X11R6/bin
-if [ -x "$PREFIX/netscape-communicator" ]; then
-	which=netscape-communicator
-else if [ -x "$PREFIX/netscape-navigator" ]; then
-	which=netscape-navigator
+PREFIX="/usr/X11R6/bin"
+if [ -x "${PREFIX}/netscape-communicator" ]; then
+	which="netscape-communicator"
+elif [ -x "${PREFIX}/netscape-navigator" ]; then
+	which="netscape-navigator"
 else
 	echo "Could not find neither netscape-communicator or navigator!"
 	exit 1
 fi
 
-if [ -x $PREFIX/$which ]; then
+if [ -x ${PREFIX}/${which} ]; then
 
     if [ -z "$*" ]; then
-	HOMEPAGE=http://www.pld.org.pl
-	if [ -f $HOME/.netscape/preferences.js ]; then
+	HOMEPAGE="http://www.pld.org.pl"
+	if [ -f ${HOME}/.netscape/preferences.js ]; then
 	    if grep "browser.startup.homepage" \
-			$HOME/.netscape/preferences.js > /dev/null; then
+			${HOME}/.netscape/preferences.js > /dev/null; then
 		HOMEPAGE=""
 	    fi
 	fi
-	exec $PREFIX/$which $HOMEPAGE
+	exec ${PREFIX}/${which} ${HOMEPAGE}
     else
-	exec $PREFIX/$which $*
+	exec ${PREFIX}/${which} $*
     fi
 fi
 
-echo "An error occurred running $PREFIX/$which."
+echo "An error occurred running $PREFIX/$which}."
+
