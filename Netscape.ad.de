@@ -5390,7 +5390,7 @@ Netscape*scroller.scrollBarPlacement:	BOTTOM_RIGHT
 *drawingArea*XmScrolledWindow.spacing:			0
 
 ! Do not under any circumstances change the following line:
-Netscape.version: 		4.77
+Netscape.version: 		4.79
 
 
 ! ============================================================================

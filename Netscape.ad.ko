@@ -3329,7 +3329,7 @@ Netscape*scroller.scrollBarPlacement:	BOTTOM_RIGHT
 *drawingArea*XmScrolledWindow.spacing:			0
 
 ! Do not under any circumstances change the following line:
-Netscape.version: 		4.74
+Netscape.version: 		4.79
 
 
 ! ============================================================================
@@ -15213,9 +15213,6 @@ Netscape*splashShell*fontList: \
 !
 ! CHOI Junho <cjh@kr.freebsd.org> 2000/10/31
 !
-
-! version of netscape
-Netscape.version:               4.79
 
 ! Language localization:
 *versionLocale: ko
