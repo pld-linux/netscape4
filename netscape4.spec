@@ -60,7 +60,7 @@ Summary(is):	Skrár sem bæği Netscape Navigator og Communicator nota
 Summary(it):	File condivisi da Netscape Navigator e da Communicator
 Summary(ja):	Netscape Navigator ¤È Communicator ¤Î´Ö¤Ç¶¦Í­¤µ¤ì¤ë¥Õ¥¡¥¤¥ë
 Summary(ko):	Netscape Navigator ¿Í Communicator ¿¡ ÀÇÇØ °øÀ¯µÇ´Â ÆÄÀÏµé
-Summary(no):	Filer som deles av Netscape Navigator og Communicator
+Summary(nb):	Filer som deles av Netscape Navigator og Communicator
 Summary(pl):	Pliki wspólne dla Netscape Navigatora i Communicatora
 Summary(pt):	Ficheiros partilhados pelo Netscape Navigator e pelo Communicator
 Summary(ru):	ïÂİÉÅ ÆÁÊÌÙ ÄÌÑ Netscape Navigator É Communicator
@@ -229,7 +229,7 @@ Netscape Communicator ¥¹¥¤¡¼¥È¤Ï Web ¥Ö¥é¥¦¥¶¡¢Usenet ¥Ë¥å¡¼¥¹¥ê¡¼¥À¡¢
 Netscape Communicator´Â À¥ ºê¶ó¿ìÀú, À¯Áî³İ ´º½º ÀĞ±â ÇÁ·Î±×·¥°ú
 ÀÌ¸ŞÀÏ Å¬¶óÀÌ¾ğÆ®¸¦ Æ÷ÇÔÇÏ´Â µµ±¸µéÀÇ ¼öÆ®(suite) ÀÔ´Ï´Ù.
 
-%description communicator -l no
+%description communicator -l nb
 Netscape Communicator er en samling verktøy, inkludert en web-leser,
 en news-leser og en e-post klient.
 
@@ -273,7 +273,7 @@ Summary(is):	Vefráparinn Netscape Navigator
 Summary(it):	Browser Web Netscape Navigator
 Summary(ja):	Netscape Navigator Web ¥Ö¥é¥¦¥¶
 Summary(ko):	Netscape Navigator À¥ ºê¶ó¿ìÀú
-Summary(no):	Web-leseren Netscape Navigator
+Summary(nb):	Web-leseren Netscape Navigator
 Summary(pl):	Netscape Navigator - przegl±darka WWW
 Summary(pt):	O navegador Web Netscape Navigator
 Summary(ru):	Netscape Navigator - ÂÒÏÕÚÅÒ éÎÔÅÒÎÅÔ
