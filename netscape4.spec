@@ -14,6 +14,7 @@ Source2:	netscape.sh
 Source3:	netscape-communicator.desktop
 Source4:	netscape-navigator.desktop
 Requires:	lesstif
+BuildRequires:	libstdc++-compat
 Exclusivearch:	%{ix86}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
