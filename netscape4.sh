@@ -31,7 +31,7 @@ if [ -x ${PREFIX}/bin/${which} ]; then
     if [ -z "$*" ]; then
 	HOMEPAGE="http://www.pld.org.pl"
 	if [ -f ${HOME}/.netscape/preferences.js ]; then
-	    if grep "browser.startup.homepage" \
+	    if grep "browser.startup.page" \
 			${HOME}/.netscape/preferences.js > /dev/null; then
 		HOMEPAGE=""
 	    fi
