@@ -15,8 +15,6 @@ Source2:	%{name}.sh
 Source3:	%{name}-communicator.desktop
 Source4:	%{name}-navigator.desktop
 Source10:	Netscape.pl.ad
-# pl resources
-Source5:	ftp://ftp.linuxpl.org/Netscape/Netscape.bz2
 Requires:	lesstif
 BuildRequires:	libstdc++-compat
 Exclusivearch:	%{ix86}
