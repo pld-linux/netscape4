@@ -13,7 +13,7 @@ Source4:	netscape-communicator.wmconfig
 Source5:	netscape-navigator.wmconfig
 Requires:	indexhtml
 Prefix:		/usr
-Exclusivearch:	i386
+Exclusivearch:	i386 i486 i586 i686
 Buildroot:	/tmp/%{name}-%{version}-root
 
 %description
