@@ -374,7 +374,7 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_bindir} \
 	$RPM_BUILD_ROOT%{_libdir}/netscape/{plugins,java/classes} \
 	$RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/{de,es,fr,ja,ko,pl,pt_BR,ru,zh_{CN,TW}} \
-	$RPM_BUILD_ROOT{%{_applnkdir}/Network/WWW,%{_pixmapsdir}}
+	$RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}}
 
 %ifarch %{ix86}
 for I in *.nif; do
@@ -406,7 +406,7 @@ install netscape $RPM_BUILD_ROOT%{_libdir}/netscape/netscape-navigator
 
 
 install %{SOURCE2} $RPM_BUILD_ROOT%{_bindir}/netscape
-install %{SOURCE3} %{SOURCE4} $RPM_BUILD_ROOT%{_applnkdir}/Network/WWW
+install %{SOURCE3} %{SOURCE4} $RPM_BUILD_ROOT%{_desktopdir}
 install %{SOURCE5} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 install %{SOURCE10} $RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/de/Netscape
@@ -477,13 +477,13 @@ rm -rf $RPM_BUILD_ROOT
 %ifarch %{ix86}
 %files navigator
 %defattr(644,root,root,755)
-%{_applnkdir}/Network/WWW/netscape-navigator.desktop
+%{_desktopdir}/netscape-navigator.desktop
 %attr(755,root,root) %{_bindir}/netscape-navigator
 %attr(755,root,root) %{_libdir}/netscape/netscape-navigator
 %endif
 
 %files communicator
 %defattr(644,root,root,755)
-%{_applnkdir}/Network/WWW/netscape-communicator.desktop
+%{_desktopdir}/netscape-communicator.desktop
 %attr(755,root,root) %{_bindir}/netscape-communicator
 %attr(755,root,root) %{_libdir}/netscape/netscape-communicator
