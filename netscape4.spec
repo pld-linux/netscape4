@@ -1,18 +1,16 @@
 Summary:	Netscape navigator and communicator
 Summary(pl):	Netscape Navigator i Communicator
 Name:		netscape
-Version:	4.05
-Release:	4
-Copyright:	Commercial
+Version:	4.7
+Release:	1
+Copyright:	Free
 Group:		X11/Applications/Networking
 Group(pl):	X11/Aplikacje/Sieciowe
-Source0:	ftp://ftp15.netscape.com/pub/communicator/4.05/shipping/english/unix/linux20/base_install/communicator-v405-export.x86-unknown-linux2.0_glibc2.tar.gz
-Source1:	ftp://ftp15.netscape.com/pub/communicator/4.05/shipping/english/unix/linux20/base_install/navigator-v405-export.x86-unknown-linux2.0_glibc2.tar.gz
-Source2:	netscape-com.sh
-Source4:	netscape-communicator.wmconfig
-Source5:	netscape-navigator.wmconfig
-Requires:	indexhtml
-Prefix:		/usr
+Source0:	ftp://ftp.netscape.com/pub/communicator/english/4.7/unix/unsupported/linux22/complete_install/communicator-v47-export.x86-unknown-linux2.2.tar.gz
+Source1:	ftp://ftp.netscape.com/pub/communicator/english/4.7/unix/unsupported/linux22/navigator_standalone/navigator-v47-export.x86-unknown-linux2.2.tar.gz
+Source2:	netscape.sh
+#Source4:	netscape-communicator.wmconfig
+#Source5:	netscape-navigator.wmconfig
 Exclusivearch:	%{ix86}
 Buildroot:	/tmp/%{name}-%{version}-root
 
@@ -102,25 +100,28 @@ for I in *.nif; do
 	tar -C $RPM_BUILD_ROOT%{_libdir}/netscape -xzvf $I
 done
 
-mv $RPM_BUILD_ROOT%{_libdir}/netscape/netscape $RPM_BUILD_ROOT/usr/lib/netscape/netscape-communicator
+mv $RPM_BUILD_ROOT%{_libdir}/netscape/netscape $RPM_BUILD_ROOT%{_libdir}/netscape/netscape-communicator
 cp -a vreg $RPM_BUILD_ROOT%{_libdir}/netscape
 cp -a *.jar $RPM_BUILD_ROOT%{_libdir}/netscape/java/classes
-echo 'Communicator,4.04.0.97310,%{_libdir}/netscape' > /tmp/infile
+echo 'Communicator,4.7.0.19990915,%{_libdir}/netscape' > /tmp/infile
 ./vreg $RPM_BUILD_ROOT%{_libdir}/netscape/registry /tmp/infile
 rm -f /tmp/infile
 
 # get the netscape-navigator binary now
-tar xvzf %{SOURCE1} '*/netscape-v405.nif'
-tar xvzf navigator*/netscape-v405.nif netscape
+tar xvzf %{SOURCE1} '*/netscape-v47.nif'
+tar xvzf navigator*/netscape-v47.nif netscape
 
 install -s netscape $RPM_BUILD_ROOT%{_libdir}/netscape/netscape-navigator
-install -s $RPM_SOURCE_DIR/netscape-com.sh $RPM_BUILD_ROOT%{_bindir}/netscape
+install %{SOURCE2} $RPM_BUILD_ROOT%{_bindir}/netscape
 
 mv $RPM_BUILD_ROOT%{_libdir}/netscape/libnullplugin-dynMotif.so \
    $RPM_BUILD_ROOT%{_libdir}/netscape/plugins
 
 ln -s ../lib/netscape/netscape-navigator $RPM_BUILD_ROOT%{_bindir}/netscape-navigator
 ln -s ../lib/netscape/netscape-communicator $RPM_BUILD_ROOT%{_bindir}/netscape-communicator
+
+mv $RPM_BUILD_ROOT%{_libdir}/netscape/{README,LICENSE,Netscape.ad} \
+	$RPM_BUILD_DIR/%{name}-%{version}/
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -132,7 +133,6 @@ rm -rf $RPM_BUILD_ROOT
 %docdir %{_libdir}/netscape/nethelp
 
 %dir %{_libdir}/netscape
-%dir %{_libdir}/netscape/plugins
 
 %attr(755,root,root) %{_bindir}/netscape
 %{_libdir}/netscape/*
@@ -140,15 +140,15 @@ rm -rf $RPM_BUILD_ROOT
 %files navigator
 %defattr(644,root,root,755)
 
-%config(missingok) /etc/X11/wmconfig/netscape-navigator
+#%config(missingok) /etc/X11/wmconfig/netscape-navigator
 
-/%attr(755,root,root) usr/bin/netscape-navigator
-/%attr(755,root,root) usr/lib/netscape/netscape-navigator
+%attr(755,root,root) %{_bindir}/netscape-navigator
+%attr(755,root,root) %{_libdir}/netscape/netscape-navigator
 
 %files communicator
 %defattr(644,root,root,755)
 
-%config(missingok) /etc/X11/wmconfig/netscape-communicator
+#%config(missingok) /etc/X11/wmconfig/netscape-communicator
 
-/%attr(755,root,root) usr/bin/netscape-communicator
-/%attr(755,root,root) usr/lib/netscape/netscape-communicator
+%attr(755,root,root) %{_bindir}/netscape-communicator
+%attr(755,root,root) %{_libdir}/netscape/netscape-communicator
