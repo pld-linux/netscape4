@@ -25,7 +25,7 @@
 !
 
 
-! Netscape.ad --- app-defaults file for Netscape 4.77.
+! Netscape.ad --- app-defaults file for Netscape 4.79.
 !
 ! Bugs and commentary to x_cbug@netscape.com.
 
@@ -4494,7 +4494,7 @@ wtyczki Mozilla i/lub programy pomocnicze Mozilla.
 ! changed at runtime; these resources won't override that.
 *title:					Mozilla
 *iconName:				Mozilla
-*Navigator.title:			Mozilla Navigator 4.77
+*Navigator.title:			Mozilla Navigator 4.79
 *MailThread.title:			Mozilla poczta i grupy dyskusyjne
 *MailThread.iconName:		Poczta i grupy dyskusyjne
 
@@ -5439,7 +5439,7 @@ Netscape*scroller.scrollBarPlacement:	BOTTOM_RIGHT
 *drawingArea*XmScrolledWindow.spacing:			0
 
 ! Do not under any circumstances change the following line:
-Netscape.version: 		4.77
+Netscape.version: 		4.79
 
 
 ! ============================================================================

@@ -1,6 +1,6 @@
 ! Insert copyright and license here 1994
 
-! Netscape.ad --- app-defaults file for Netscape 4.77.
+! Netscape.ad --- app-defaults file for Netscape 4.79.
 !
 ! Bugs and commentary to x_cbug@netscape.com.
 
@@ -4465,7 +4465,7 @@ when moving focus to other windows.
 ! changed at runtime; these resources won't override that.
 *title:					Netscape
 *iconName:				Netscape
-*Navigator.title:			Netscape 領航者 4.77
+*Navigator.title:			Netscape 領航者 4.79
 *MailThread.title:			Netscape 郵件 & 新聞群組
 *MailThread.iconName:		 郵件 & 新聞群組
 
@@ -5384,7 +5384,7 @@ Netscape*scroller.scrollBarPlacement:	BOTTOM_RIGHT
 *drawingArea*XmScrolledWindow.spacing:			0
 
 ! Do not under any circumstances change the following line:
-Netscape.version: 		4.77
+Netscape.version: 		4.79
 
 
 ! ============================================================================

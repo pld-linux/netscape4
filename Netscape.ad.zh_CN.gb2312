@@ -4468,7 +4468,7 @@ Netscape*attachmentProps*XmLabelGadget.fontList:	-*-helvetica-medium-r-*-*-*-120
 ! changed at runtime; these resources won't override that.
 *title:					Netscape
 *iconName:				Netscape
-*Navigator.title:			Netscape Navigator 4.77
+*Navigator.title:			Netscape Navigator 4.79
 *MailThread.title:			Netscape 邮件和新闻组
 *MailThread.iconName:		邮件和新闻组
 
@@ -5401,7 +5401,7 @@ Netscape*scroller.scrollBarPlacement:	BOTTOM_RIGHT
 *drawingArea*XmScrolledWindow.spacing:			0
 
 ! Do not under any circumstances change the following line:
-Netscape.version: 		4.77
+Netscape.version: 		4.79
 
 
 ! ============================================================================

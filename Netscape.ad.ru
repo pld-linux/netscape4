@@ -1,6 +1,6 @@
 ! Insert copyright and license here 1994
 
-! Netscape.ad --- app-defaults file for Netscape 4.77.
+! Netscape.ad --- app-defaults file for Netscape 4.79.
 !
 ! Bugs and commentary to x_cbug@netscape.com.
 
@@ -9,7 +9,7 @@
 ! Modified: snpf <snpf@netscape.com>, 23-Sep-96
 ! Modified: submitted by Leon Kanter <leon@geon.donetsk.ua>
 ! Modified: updated for 4.76 <notting@redhat.com> 09-Nov-2000
-! Modified: updated for 4.77 <notting@redhat.com> 09-Apr-2000
+! Modified: updated for 4.79 <notting@redhat.com> 09-Apr-2000
 !
 !      ==========================================================
 !      NOTE: If you're looking here for things to customize, look
@@ -4471,7 +4471,7 @@ by Netscape's plug-ins or Netscape's helper applications.
 ! changed at runtime; these resources won't override that.
 *title:					Netscape
 *iconName:				Netscape
-*Navigator.title:			Netscape Navigator 4.77
+*Navigator.title:			Netscape Navigator 4.79
 *MailThread.title:			Netscape Mail & Newsgroups
 *MailThread.iconName:		Mail & Newsgroups
 
@@ -5404,7 +5404,7 @@ Netscape*scroller.scrollBarPlacement:	BOTTOM_RIGHT
 *drawingArea*XmScrolledWindow.spacing:			0
 
 ! Do not under any circumstances change the following line:
-Netscape.version: 		4.77
+Netscape.version: 		4.79
 
 
 ! ============================================================================

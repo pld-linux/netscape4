@@ -1,6 +1,6 @@
 ! Insert copyright and license here 1994
 
-! Netscape.ad - arquivo de padrões para Netscape 4.77.
+! Netscape.ad - arquivo de padrões para Netscape 4.79.
 !
 ! Copyright (c) 1994-1997 Netscape Communications Corporation,
 ! todos os direitos reservados 
@@ -25,7 +25,7 @@
 ! ter jun  6 10:19:58 BRST 2000 - andreas@conectiva.com.br (4.73)
 ! sex jul 21 15:04:02 BRST 2000 - andreas@conectiva.com.br (4.74)
 ! sex ago 18 10:40:09 BRT 2000  - andreas@conectiva.com.br (4.76)
-! seg Abr  9 22:22:14 BRT 2001  - andreas@conectiva.com.br (4.77)
+! seg Abr  9 22:22:14 BRT 2001  - andreas@conectiva.com.br (4.79)
 ! 
 ! Tradução atualizada em outubro de 2000 por
 ! Marcia Norie Nakaza <norie@conectiva.com.br> e
@@ -67,7 +67,7 @@
 ! receber uma série de reclamações de pessoas que pensam que entendem 
 ! o seu conteúdo melhor que eu.
 
-! Netscape.ad --- app-defaults file for Netscape 4.77.
+! Netscape.ad --- app-defaults file for Netscape 4.79.
 !
 ! Bugs and commentary to x_cbug@netscape.com.
 
@@ -4813,7 +4813,7 @@ pelo ConecZilla e suas aplicações.
 ! changed at runtime; these resources won't override that.
 *title:					ConecZilla
 *iconName:				Netscape
-*Navigator.title: Navegador ConecZilla 4.77
+*Navigator.title: Navegador ConecZilla 4.79
 *MailThread.title: ConecZilla Correio & Grupos de Notícias
 *MailThread.iconName:		Correio & Grupos de Notícias
 
@@ -5777,7 +5777,7 @@ e vê-lo/ouvi-lo após sua total recepção?
 *drawingArea*XmScrolledWindow.spacing:			0
 
 ! Do not under any circumstances change the following line:
-Netscape.version: 		4.77
+Netscape.version: 		4.79
 
 
 ! ============================================================================

@@ -1,5 +1,5 @@
 ! ----------------------------------------
-! Netscape 4.77 Resource(ko)
+! Netscape 4.79 Resource(ko)
 !
 ! Netscape Localization for Korean
 !   http://www.kr.freebsd.org/~cjh/freetime/mozilla/netscape-ko/
@@ -18,7 +18,7 @@
 !
 ! Insert copyright and license here 1994
 
-! Netscape.ad --- app-defaults file for Netscape 4.77.
+! Netscape.ad --- app-defaults file for Netscape 4.79.
 !
 ! Bugs and commentary to x_cbug@netscape.com.
 
@@ -15215,7 +15215,7 @@ Netscape*splashShell*fontList: \
 !
 
 ! version of netscape
-Netscape.version:               4.77
+Netscape.version:               4.79
 
 ! Language localization:
 *versionLocale: ko

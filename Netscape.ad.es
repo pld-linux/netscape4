@@ -14,7 +14,7 @@
 ! Adaptado para la 4.7 por Pablo Saratxaga <pablo@mandrakesoft.com> 1999-10-19
 ! Adapted for 4.75 by Bill Nottingham <notting@redhat.com> 2000-02-23
 ! Adapted for 4.76 by Bill Nottingham <notting@redhat.com> 2000-11-09
-! Adapted for 4.77 by Bill Nottingham <notting@redhat.com> 2001-04-09
+! Adapted for 4.79 by Bill Nottingham <notting@redhat.com> 2001-04-09
 
 ! Traducción y publicación de este archivo realizada bajo la
 ! licencia del Programa de Localización Universal, publicada
@@ -151,10 +151,10 @@
 !
 ! ------------------------------------------------------------------------
 !
-! CÓMO UTILIZAR ESTE ARCHIVO. CÓMO CONVERTIR COMMUNICATOR 4.77 AL CASTELLANO
+! CÓMO UTILIZAR ESTE ARCHIVO. CÓMO CONVERTIR COMMUNICATOR 4.79 AL CASTELLANO
 ! =========================================================================
 ! En primer lugar, tiene que instalar la versión "standard" original inglesa de 
-! Communicator 4.77. Si tiene instalada cualquier otra versión, pero no la 4.77,
+! Communicator 4.79. Si tiene instalada cualquier otra versión, pero no la 4.79,
 ! este archivo no funcionará. Los más intrépidos pueden indagar en este archivo
 ! y conseguir que funcione en otras versiones, pero entonces, no solo no
 ! obtendrá una versión *íntegramente* en castellano, sino que es muy posible que
@@ -163,7 +163,7 @@
 ! se puede asegurar que aparezca todo en castellano, aunque posiblemente, el
 ! programa se ejecute sin mayores complicaciones.
 !
-! Una vez este seguro de que tiene ya instalada la versión 4.77 de Communicator,
+! Una vez este seguro de que tiene ya instalada la versión 4.79 de Communicator,
 ! tan solo tiene que copiar este archivo a su directorio de inicio (home
 ! directory) con el nombre "Netscape" (sí, la primera letra en mayúscula):
 ! 
@@ -4626,7 +4626,7 @@ reconocido por los plug-ins o aplicaciones de ayuda de Mozilla.
 ! changed at runtime; these resources won't override that.
 *title:	Mozilla
 *iconName:	Mozilla
-*Navigator.title:	Navegador Mozilla[es] 4.77
+*Navigator.title:	Navegador Mozilla[es] 4.79
 *MailThread.title:	Correo y grupos de noticias
 *MailThread.iconName:	Correo y grupos de noticias
 
@@ -5543,7 +5543,7 @@ Netscape*scroller.scrollBarPlacement:	BOTTOM_RIGHT
 *drawingArea*XmScrolledWindow.spacing:	0
 
 ! Do not under any circumstances change the following line:
-Netscape.version: 		4.77
+Netscape.version: 		4.79
 
 
 ! ============================================================================
