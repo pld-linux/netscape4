@@ -2,11 +2,11 @@ Summary:	Netscape Navigator and Communicator
 Summary(pl):	Netscape Navigator i Communicator
 Summary(ru):	Netscape Navigator … Communicator
 Summary(uk):	Netscape Navigator ‘¡ Communicator
-Name:		netscape
+Name:		netscape4
 Version:	4.8
 %define _shortver 48
 %define _registry %{version}.0.20020722
-Release:	6
+Release:	1
 Epoch:		1
 License:	distributable
 Group:		X11/Applications/Networking
@@ -33,6 +33,7 @@ Source19:	Netscape.ad.zh_TW
 BuildRequires:	compat-libstdc++-2.9
 Requires:	lesstif
 ExclusiveArch:	%{ix86} ppc
+Obsoletes:	netscape < 5
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -184,7 +185,7 @@ Summary(tr):	Netscape Communicator taray˝c˝, haber okuyucu ve e-posta istemcisi
 Summary(uk):	Netscape Communicator - ¬“œ’⁄≈“, Œÿ¿”“¶ƒ≈“ ‘¡ –œ€‘œ◊…  ÀÃ¶§Œ‘
 Summary(zh_CN):	Netscape Communicator µƒπ§æﬂÃ◊°£
 Group:		X11/Applications/Networking
-Requires:	netscape-common
+Requires:	netscape4-common
 
 %description communicator
 Netscape Communicator is a suite of tools including a Web browser, a
@@ -284,7 +285,7 @@ Summary(tr):	Netscape Navigator web taray˝c˝
 Summary(uk):	Netscape Navigator - ¬“œ’⁄≈“ ∂Œ‘≈“Œ≈‘
 Summary(zh_CN):	Netscape Navigator Õ¯“≥‰Ø¿¿∆˜°£
 Group:		X11/Applications/Networking
-Requires:	netscape-common
+Requires:	netscape4-common
 
 %description navigator
 Netscape Navigator is a Web browser which supports
