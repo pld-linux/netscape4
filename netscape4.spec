@@ -126,7 +126,7 @@ ln -s ../lib/netscape/netscape-communicator $RPM_BUILD_ROOT%{_bindir}/netscape-c
 rm -rf $RPM_BUILD_ROOT
 
 %files common
-%defattr(644, root, root, 755)
+%defattr(644,root,root,755)
 
 %doc README LICENSE Netscape.ad
 %docdir %{_libdir}/netscape/nethelp
@@ -134,24 +134,24 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_libdir}/netscape
 %dir %{_libdir}/netscape/plugins
 
-%attr(755, root, root) %{_bindir}/netscape
+%attr(755,root,root) %{_bindir}/netscape
 %{_libdir}/netscape/*
 
 %files navigator
-%defattr(644, root, root, 755)
+%defattr(644,root,root,755)
 
 %config(missingok) /etc/X11/wmconfig/netscape-navigator
 
-/%attr(755, root, root) usr/bin/netscape-navigator
-/%attr(755, root, root) usr/lib/netscape/netscape-navigator
+/%attr(755,root,root) usr/bin/netscape-navigator
+/%attr(755,root,root) usr/lib/netscape/netscape-navigator
 
 %files communicator
-%defattr(644, root, root, 755)
+%defattr(644,root,root,755)
 
 %config(missingok) /etc/X11/wmconfig/netscape-communicator
 
-/%attr(755, root, root) usr/bin/netscape-communicator
-/%attr(755, root, root) usr/lib/netscape/netscape-communicator
+/%attr(755,root,root) usr/bin/netscape-communicator
+/%attr(755,root,root) usr/lib/netscape/netscape-communicator
 
 %changelog
 * Sun Feb  7 1999 Micha³ Kuratczyk <kurkens@polbox.com>
