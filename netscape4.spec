@@ -20,25 +20,16 @@ Source3:	%{name}-communicator.desktop
 Source4:	%{name}-navigator.desktop
 Source5:	%{name}.png
 Source10:	Netscape.ad.de
-# Source10-md5:	656a1d742bac79ae23e322ee3caa8f7e
 Source11:	Netscape.ad.es
-# Source11-md5:	e66046fd8ebe5e3288a7ca609ae9bd96
 Source12:	Netscape.ad.fr
-# Source12-md5:	07bcb4de75789980dd22e959100ff503
 Source13:	Netscape.ad.ja
-# Source13-md5:	2fa4f215cac5e3a0dc22e4497c60275c
 Source14:	Netscape.ad.ko
-# Source14-md5:	9fbfea6dee10cd927f0a6b58ea33800d
 Source15:	Netscape.ad.pl
-# Source15-md5:	ef01be6811b11698fce8c2721adb6888
 Source16:	Netscape.ad.pt_BR
-# Source16-md5:	1c3de41f8a1c1cea30b882de8018b6a4
 Source17:	Netscape.ad.ru
-# Source17-md5:	84cd5534b9f0df43d5f4b7e2075011a5
 Source18:	Netscape.ad.zh_CN
-# Source18-md5:	44a5c3d2fd277ac3ad4dedbc5f4796b2
 Source19:	Netscape.ad.zh_TW
-# Source19-md5:	7340e80bbfb76f45aa80da783fc0eb18
+BuildRequires:	libstdc++-compat
 Requires:	lesstif
 ExclusiveArch:	%{ix86} ppc
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -54,10 +45,10 @@ Graficzna przegl±darka WWW Netscape Navigator oraz pakiet Netscape
 Communicator.
 
 %description -l ru
-Netscape navigator É communicator
+Netscape navigator É communicator.
 
 %description -l uk
-Netscape navigator ÔÁ communicator
+Netscape navigator ÔÁ communicator.
 
 %package common
 Summary:	Files shared by Netscape Navigator and Communicator
@@ -108,24 +99,25 @@ ein Email-Client, ein Newsreader und ein Webseiten-Editor).
 
 %description common -l es
 Este paquete contiene los ficheros comunes del navegador Web Netscape
-navigator y el paquete de herramientas Netscape Communicator (navegador
-web de Navigator, cliente de correo electrónico, lector de noticias y
-editor de páginas web).
+navigator y el paquete de herramientas Netscape Communicator
+(navegador web de Navigator, cliente de correo electrónico, lector de
+noticias y editor de páginas web).
 
 %description common -l fr
 Ce paquetage contient les fichiers partagés entre le navigateur Web
-Netscape Navigator et la suite d'outils Netscape Communicator (navigateur
-Web Netscape Navigator, client de messagerie, lecteur de nouvelles et
-éditeur de pages Web).
+Netscape Navigator et la suite d'outils Netscape Communicator
+(navigateur Web Netscape Navigator, client de messagerie, lecteur de
+nouvelles et éditeur de pages Web).
 
 %description common -l id
-Paket ini berisi file-file yang dipakai bersama oleh browser Web Netscape
-Navigator dan suite program Netscape Communicator (browser Web Navigator,
-client e-mail, pembaca news, dan editor halaman Web.)
+Paket ini berisi file-file yang dipakai bersama oleh browser Web
+Netscape Navigator dan suite program Netscape Communicator (browser
+Web Navigator, client e-mail, pembaca news, dan editor halaman Web.)
 
 %description common -l is
-Şessi pakki innniheldur şær skrár sem eru notağar af Netscape Navigator og
-Netscape Communicator (Vefrápara, póstforrit, fréttalesara og Vefritill).
+Şessi pakki innniheldur şær skrár sem eru notağar af Netscape
+Navigator og Netscape Communicator (Vefrápara, póstforrit,
+fréttalesara og Vefritill).
 
 %description common -l it
 Questo pacchetto contiene i file condivisi dal browser Web Netscape
@@ -148,8 +140,8 @@ czytnik news i edytor stron WWW).
 %description common -l pt
 Este pacote contém os ficheiros partilhados entre o navegador Web
 Netscape Navigator e o conjunto de ferramentas Netscape Communicator
-(o navegador Web Navigator, um cliente de 'e-mail', um leitor de 'news'
-e um editor de páginas Web).
+(o navegador Web Navigator, um cliente de 'e-mail', um leitor de
+'news' e um editor de páginas Web).
 
 %description common -l ru
 æÁÊÌÙ, ÉÓĞÏÌØÚÕÅÍÙÅ ËÁË Netscape Navigator'ÏÍ, ÔÁË É Netscape
@@ -210,19 +202,22 @@ Netscape Communicator er en samling værktøjer, inklusive en web-læser,
 en nyheds-læser og en e-post klient.
 
 %description communicator -l de
-Netscape Communicator ist eine Toolsammlung mit einem Web-Browser, einem
-Usenet Newsreader und einem Email-Client.
+Netscape Communicator ist eine Toolsammlung mit einem Web-Browser,
+einem Usenet Newsreader und einem Email-Client.
 
 %description communicator -l es
 Netscape Communicator es un conjunto de herramientas que incluye un
-navegador web, un lector de noticias y un cliente de correo electrónico.
+navegador web, un lector de noticias y un cliente de correo
+electrónico.
 
 %description communicator -l fr
-Netscape Communicator est une suite d'outils qui comprend un navigateur
-Web, un lecteur de nouvelles Usenet et un client de messagerie.
+Netscape Communicator est une suite d'outils qui comprend un
+navigateur Web, un lecteur de nouvelles Usenet et un client de
+messagerie.
 
 %description communicator -l id
-Netscape Communicator, termasuk browser Web, pembaca news dan client e-mail.
+Netscape Communicator, termasuk browser Web, pembaca news dan client
+e-mail.
 
 %description communicator -l is
 Netscape Communicator er safn tóla sem inniheldur m.a. vefrápara,
@@ -265,9 +260,9 @@ Netscape Communicator är en verktygssvit som innehåller en webbläsare,
 en Usenet nyhetsläsare och en epostklient.
 
 %description communicator -l uk
-Netscape Communicator - ÃÅ ĞÏĞÕÌÑÒÎÉÊ web-ÂÒÏÕÚÅÒ. ÷¦Î Ğ¦ÄÔÒÉÍÕ¤ ÏÓÔÁÎÎ¦
-ÓÔÁÎÄÁÒÔÉ HTML, Java ÔÁ JavaScript. ôÁËÏÖ Í¦ÓÔÉÔØ ĞÏ×ÎÏÃ¦ÎÎÉÊ ÎØÀÓÒ¦ÄÅÒ
-Usenet ÔÁ ĞÏÛÔÏ×ÉÊ ËÌ¦¤ÎÔ.
+Netscape Communicator - ÃÅ ĞÏĞÕÌÑÒÎÉÊ web-ÂÒÏÕÚÅÒ. ÷¦Î Ğ¦ÄÔÒÉÍÕ¤
+ÏÓÔÁÎÎ¦ ÓÔÁÎÄÁÒÔÉ HTML, Java ÔÁ JavaScript. ôÁËÏÖ Í¦ÓÔÉÔØ ĞÏ×ÎÏÃ¦ÎÎÉÊ
+ÎØÀÓÒ¦ÄÅÒ Usenet ÔÁ ĞÏÛÔÏ×ÉÊ ËÌ¦¤ÎÔ.
 
 %description communicator -l zh_CN
 Netscape ¹¤¾ß£¬°üÀ¨ Web ä¯ÀÀÆ÷¡¢ĞÂÎÅÔÄ¶Á³ÌĞòºÍµç×ÓÓÊ¼ş¿Í»§³ÌĞò¡£
@@ -324,13 +319,13 @@ normes HTML les plus récentes, Java, JavaScript et certaines feuilles
 de style.
 
 %description navigator -l id
-Netscape Navigator adalah browser Web yang paling umum di pasaran. Program
-ini mendukung standar HTML terbaru, Java, Javascript dan beberapa jenis
-style sheet.
+Netscape Navigator adalah browser Web yang paling umum di pasaran.
+Program ini mendukung standar HTML terbaru, Java, Javascript dan
+beberapa jenis style sheet.
 
 %description navigator -l is
-Netscape Navigator er vefrápari. Hann styğur helstu HTML stağlana, JAva,
-JavaScript og sniğ.
+Netscape Navigator er vefrápari. Hann styğur helstu HTML stağlana,
+JAva, JavaScript og sniğ.
 
 %description navigator -l it
 Netscape Navigator è un browser Web che supporta gli ultimi standard
@@ -367,8 +362,8 @@ HTML-standarderna, Java, JavaScript och några stilblad (style
 sheets).
 
 %description navigator -l uk
-Netscape Communicator - ÃÅ ĞÏĞÕÌÑÒÎÉÊ web-ÂÒÏÕÚÅÒ. ÷¦Î Ğ¦ÄÔÒÉÍÕ¤ ÏÓÔÁÎÎ¦
-ÓÔÁÎÄÁÒÔÉ HTML, Java ÔÁ JavaScript.
+Netscape Communicator - ÃÅ ĞÏĞÕÌÑÒÎÉÊ web-ÂÒÏÕÚÅÒ. ÷¦Î Ğ¦ÄÔÒÉÍÕ¤
+ÏÓÔÁÎÎ¦ ÓÔÁÎÄÁÒÔÉ HTML, Java ÔÁ JavaScript.
 
 %prep
 %setup -c -q
