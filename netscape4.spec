@@ -11,7 +11,9 @@ License:	distributable
 Group:		X11/Applications/Networking
 %ifarch %{ix86}
 Source0:	ftp://ftp.netscape.com/pub/communicator/english/%{version}/unix/supported/linux22/complete_install/communicator-v%{_shortver}-us.x86-unknown-linux2.2.tar.gz
+# Source0-md5:	d57e2faf8ff8c8a75d3214a268f65050
 Source1:	ftp://ftp.netscape.com/pub/communicator/english/%{version}/unix/supported/linux22/navigator_standalone/navigator-v%{_shortver}-us.x86-unknown-linux2.2.tar.gz
+# Source1-md5:	40981cdbd2bf67eb2846e19966c0e3ec
 %endif
 %ifarch ppc
 Source0:	communicator-v473.ppclinux.tar.gz
@@ -21,15 +23,25 @@ Source3:	%{name}-communicator.desktop
 Source4:	%{name}-navigator.desktop
 Source5:	%{name}.png
 Source10:	Netscape.ad.de
+# Source10-md5:	656a1d742bac79ae23e322ee3caa8f7e
 Source11:	Netscape.ad.es
+# Source11-md5:	e66046fd8ebe5e3288a7ca609ae9bd96
 Source12:	Netscape.ad.fr
+# Source12-md5:	07bcb4de75789980dd22e959100ff503
 Source13:	Netscape.ad.ja
+# Source13-md5:	2fa4f215cac5e3a0dc22e4497c60275c
 Source14:	Netscape.ad.ko
+# Source14-md5:	9fbfea6dee10cd927f0a6b58ea33800d
 Source15:	Netscape.ad.pl
+# Source15-md5:	ef01be6811b11698fce8c2721adb6888
 Source16:	Netscape.ad.pt_BR
+# Source16-md5:	1c3de41f8a1c1cea30b882de8018b6a4
 Source17:	Netscape.ad.ru
+# Source17-md5:	84cd5534b9f0df43d5f4b7e2075011a5
 Source18:	Netscape.ad.zh_CN
+# Source18-md5:	44a5c3d2fd277ac3ad4dedbc5f4796b2
 Source19:	Netscape.ad.zh_TW
+# Source19-md5:	7340e80bbfb76f45aa80da783fc0eb18
 Requires:	lesstif
 BuildRequires:	libstdc++-compat
 ExclusiveArch:	%{ix86} ppc
