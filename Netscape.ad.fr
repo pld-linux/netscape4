@@ -1,6 +1,6 @@
 ! Insert copyright and license here 1994
 
-! Netscape.ad --- app-defaults file for Netscape 4.79.
+! Netscape.ad --- app-defaults file for Netscape 4.8.
 ! REVISION 0.7 of the french language file (1999-10-19)
 !
 
@@ -30,16 +30,16 @@
 
 ! ------------------------------------------------------------------------
 !
-! COMMENT UTILISER CE FICHIER POUR FRANCISER NETSCAPE 4.79
+! COMMENT UTILISER CE FICHIER POUR FRANCISER NETSCAPE 4.8
 ! =======================================================
 ! Tout d'abord, vous devez avoir installé la version «standard», en anglais,
-! de Communicator 4.79. Si vous avez une autre version ce fichier ne va pas
+! de Communicator 4.8. Si vous avez une autre version ce fichier ne va pas
 ! fonctionner comme il faut. Vous pouvez, si vous êtes courageux, essayer de
 ! l'adapter manuellement, mais le mieux serait de contacter les autres
 ! personnes ayant travaillé dessus de façon à faire quelque chose de
 ! coordonné; voir l'url plus bas.
 !
-! Si vous avez installé la version 4.79 de Communicator, vous devez seulement
+! Si vous avez installé la version 4.8 de Communicator, vous devez seulement
 ! copier ce fichier ci dans votre repertoire personnel, sous le nom ~/Netscape
 ! ou (ce qui est mieux) comme /usr/X11R6/lib/X11/fr/app-defaults/Netscape.
 ! Ainsi, vous n'avez qu'a definir la variable d'environement $LANG avec
@@ -403,6 +403,8 @@
 		 Alt ~Ctrl<Key>O:		undefined-key()				\n\
 		Meta ~Ctrl<Key>P:		undefined-key()				\n\
 		 Alt ~Ctrl<Key>P:		undefined-key()				\n\
+	Meta Shift<Key>Q:		xfeDoCommand(quoteOriginalText)		\n\
+	 Alt Shift<Key>Q:		xfeDoCommand(quoteOriginalText)		\n\
 	Meta ~Ctrl<Key>Q:		xfeDoCommand(exit)					\n\
 	 Alt ~Ctrl<Key>Q:		xfeDoCommand(exit)					\n\
 		Meta ~Ctrl<Key>R:		undefined-key()				\n\
@@ -460,6 +462,8 @@
 
 ! Translations in the Navigator window.
 *browserGlobalTranslations:		#override			\
+	Meta Shift<Key>F:		xfeDoCommand(search)			\n\
+	 Alt Shift<Key>F:		xfeDoCommand(search)			\n\
 	      Ctrl ~Shift<Key>f:		xfeDoCommand(findInObject)			\n\
 	      Ctrl ~Shift<Key>g:		xfeDoCommand(findAgain)				\n\
     Meta ~Ctrl ~Shift<Key>i: xfeDoCommand(showImages)			\n\
@@ -1261,6 +1265,8 @@
 	 Alt ~Ctrl ~Shift<Key>n: xfeDoCommand(openBrowser)			\n\
 	Meta ~Ctrl  Shift<Key>n: xfeDoCommand(newBlank)				\n\
 	 Alt ~Ctrl  Shift<Key>n: xfeDoCommand(newBlank)				\n\
+	Meta Shift<Key>Q:		xfeDoCommand(quoteOriginalText)		\n\
+	 Alt Shift<Key>Q:		xfeDoCommand(quoteOriginalText)		\n\
 	Meta ~Ctrl<Key>Q:		xfeDoCommand(exit)					\n\
 	 Alt ~Ctrl<Key>Q:		xfeDoCommand(exit)					\n\
 		Meta ~Ctrl<Key>R:		undefined-key()				\n\
@@ -4475,7 +4481,7 @@ reconnus par les aides ou les applications Mozilla.
 ! changed at runtime; these resources won't override that.
 *title:					Mozilla
 *iconName:				Netscape
-*Navigator.title:			Mozilla Navigator 4.79
+*Navigator.title:			Mozilla Navigator 4.8
 *MailThread.title:			Courrier et forums
 *MailThread.iconName:		Courrier et forums
 
@@ -5409,7 +5415,7 @@ Netscape*scroller.scrollBarPlacement:	BOTTOM_RIGHT
 *drawingArea*XmScrolledWindow.spacing:			0
 
 ! Do not under any circumstances change the following line:
-Netscape.version: 		4.79
+Netscape.version: 		4.8
 
 
 ! ============================================================================

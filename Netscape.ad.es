@@ -151,10 +151,10 @@
 !
 ! ------------------------------------------------------------------------
 !
-! CÓMO UTILIZAR ESTE ARCHIVO. CÓMO CONVERTIR COMMUNICATOR 4.79 AL CASTELLANO
+! CÓMO UTILIZAR ESTE ARCHIVO. CÓMO CONVERTIR COMMUNICATOR 4.8 AL CASTELLANO
 ! =========================================================================
 ! En primer lugar, tiene que instalar la versión "standard" original inglesa de 
-! Communicator 4.79. Si tiene instalada cualquier otra versión, pero no la 4.79,
+! Communicator 4.8. Si tiene instalada cualquier otra versión, pero no la 4.8,
 ! este archivo no funcionará. Los más intrépidos pueden indagar en este archivo
 ! y conseguir que funcione en otras versiones, pero entonces, no solo no
 ! obtendrá una versión *íntegramente* en castellano, sino que es muy posible que
@@ -163,7 +163,7 @@
 ! se puede asegurar que aparezca todo en castellano, aunque posiblemente, el
 ! programa se ejecute sin mayores complicaciones.
 !
-! Una vez este seguro de que tiene ya instalada la versión 4.79 de Communicator,
+! Una vez este seguro de que tiene ya instalada la versión 4.8 de Communicator,
 ! tan solo tiene que copiar este archivo a su directorio de inicio (home
 ! directory) con el nombre "Netscape" (sí, la primera letra en mayúscula):
 ! 
@@ -565,6 +565,8 @@
 		 Alt ~Ctrl<Key>O:		undefined-key()				\n\
 		Meta ~Ctrl<Key>P:		undefined-key()				\n\
 		 Alt ~Ctrl<Key>P:		undefined-key()				\n\
+	Meta Shift<Key>Q:		xfeDoCommand(quoteOriginalText)		\n\
+	 Alt Shift<Key>Q:		xfeDoCommand(quoteOriginalText)		\n\
 	Meta ~Ctrl<Key>Q:		xfeDoCommand(exit)					\n\
 	 Alt ~Ctrl<Key>Q:		xfeDoCommand(exit)					\n\
 		Meta ~Ctrl<Key>R:		undefined-key()				\n\
@@ -623,6 +625,8 @@
 
 ! Translations in the Navigator window.
 *browserGlobalTranslations:		#override			\
+	Meta Shift<Key>F:		xfeDoCommand(search)			\n\
+	 Alt Shift<Key>F:		xfeDoCommand(search)			\n\
 	      Ctrl ~Shift<Key>f:		xfeDoCommand(findInObject)			\n\
 	      Ctrl ~Shift<Key>g:		xfeDoCommand(findAgain)				\n\
     Meta ~Ctrl ~Shift<Key>i: xfeDoCommand(showImages)			\n\
@@ -1422,6 +1426,8 @@
 	 Alt ~Ctrl ~Shift<Key>n: xfeDoCommand(openBrowser)			\n\
 	Meta ~Ctrl  Shift<Key>n: xfeDoCommand(newBlank)				\n\
 	 Alt ~Ctrl  Shift<Key>n: xfeDoCommand(newBlank)				\n\
+	Meta Shift<Key>Q:		xfeDoCommand(quoteOriginalText)		\n\
+	 Alt Shift<Key>Q:		xfeDoCommand(quoteOriginalText)		\n\
 	Meta ~Ctrl<Key>Q:		xfeDoCommand(exit)					\n\
 	 Alt ~Ctrl<Key>Q:		xfeDoCommand(exit)					\n\
 		Meta ~Ctrl<Key>R:		undefined-key()				\n\
@@ -4626,7 +4632,7 @@ reconocido por los plug-ins o aplicaciones de ayuda de Mozilla.
 ! changed at runtime; these resources won't override that.
 *title:	Mozilla
 *iconName:	Mozilla
-*Navigator.title:	Navegador Mozilla[es] 4.79
+*Navigator.title:	Navegador Mozilla[es] 4.8
 *MailThread.title:	Correo y grupos de noticias
 *MailThread.iconName:	Correo y grupos de noticias
 
@@ -5543,7 +5549,7 @@ Netscape*scroller.scrollBarPlacement:	BOTTOM_RIGHT
 *drawingArea*XmScrolledWindow.spacing:	0
 
 ! Do not under any circumstances change the following line:
-Netscape.version: 		4.79
+Netscape.version: 		4.8
 
 
 ! ============================================================================

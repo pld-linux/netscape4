@@ -1,6 +1,6 @@
 ! Insert copyright and license here 1994
 
-! Netscape.ad --- app-defaults file for Netscape 4.79.
+! Netscape.ad --- app-defaults file for Netscape 4.8.
 !
 ! Bugs and commentary to x_cbug@netscape.com.
 
@@ -400,6 +400,8 @@
 		 Alt ~Ctrl<Key>O:		undefined-key()				\n\
 		Meta ~Ctrl<Key>P:		undefined-key()				\n\
 		 Alt ~Ctrl<Key>P:		undefined-key()				\n\
+	Meta Shift<Key>Q:		xfeDoCommand(quoteOriginalText)		\n\
+	 Alt Shift<Key>Q:		xfeDoCommand(quoteOriginalText)		\n\
 	Meta ~Ctrl<Key>Q:		xfeDoCommand(exit)					\n\
 	 Alt ~Ctrl<Key>Q:		xfeDoCommand(exit)					\n\
 		Meta ~Ctrl<Key>R:		undefined-key()				\n\
@@ -460,6 +462,8 @@
 
 ! Translations in the Navigator window.
 *browserGlobalTranslations:		#override			\
+	Meta Shift<Key>F:		xfeDoCommand(search)			\n\
+	 Alt Shift<Key>F:		xfeDoCommand(search)			\n\
 	Meta ~Ctrl ~Shift<Key>f:		xfeDoCommand(findInObject)			\n\
 	 Alt ~Ctrl ~Shift<Key>f:		xfeDoCommand(findInObject)			\n\
 	Meta ~Ctrl ~Shift<Key>g:		xfeDoCommand(findAgain)				\n\
@@ -1273,6 +1277,8 @@
 	 Alt ~Ctrl ~Shift<Key>n: xfeDoCommand(openBrowser)			\n\
 	Meta ~Ctrl  Shift<Key>n: xfeDoCommand(newBlank)				\n\
 	 Alt ~Ctrl  Shift<Key>n: xfeDoCommand(newBlank)				\n\
+	Meta Shift<Key>Q:		xfeDoCommand(quoteOriginalText)		\n\
+	 Alt Shift<Key>Q:		xfeDoCommand(quoteOriginalText)		\n\
 	Meta ~Ctrl<Key>Q:		xfeDoCommand(exit)					\n\
 	 Alt ~Ctrl<Key>Q:		xfeDoCommand(exit)					\n\
 		Meta ~Ctrl<Key>R:		undefined-key()				\n\
@@ -4471,7 +4477,7 @@ by Netscape's plug-ins or Netscape's helper applications.
 ! changed at runtime; these resources won't override that.
 *title:					Netscape
 *iconName:				Netscape
-*Navigator.title:			Netscape Navigator 4.79
+*Navigator.title:			Netscape Navigator 4.8
 *MailThread.title:			Netscape Mail & Newsgroups
 *MailThread.iconName:		Mail & Newsgroups
 
@@ -5404,7 +5410,7 @@ Netscape*scroller.scrollBarPlacement:	BOTTOM_RIGHT
 *drawingArea*XmScrolledWindow.spacing:			0
 
 ! Do not under any circumstances change the following line:
-Netscape.version: 		4.79
+Netscape.version: 		4.8
 
 
 ! ============================================================================
