@@ -94,7 +94,7 @@ rmdir communicator*
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/usr/bin
+install -d $RPM_BUILD_ROOT%{_bindir}
 install -d $RPM_BUILD_ROOT%{_libdir}/netscape/{plugins,java/classes}
 install -d $RPM_BUILD_ROOT/etc/X11/wmconfig
 
@@ -114,13 +114,13 @@ tar xvzf %{SOURCE1} '*/netscape-v405.nif'
 tar xvzf navigator*/netscape-v405.nif netscape
 
 install -s netscape $RPM_BUILD_ROOT%{_libdir}/netscape/netscape-navigator
-install -s $RPM_SOURCE_DIR/netscape-com.sh $RPM_BUILD_ROOT/usr/bin/netscape
+install -s $RPM_SOURCE_DIR/netscape-com.sh $RPM_BUILD_ROOT%{_bindir}/netscape
 
 mv $RPM_BUILD_ROOT%{_libdir}/netscape/libnullplugin-dynMotif.so \
    $RPM_BUILD_ROOT%{_libdir}/netscape/plugins
 
-ln -s ../lib/netscape/netscape-navigator $RPM_BUILD_ROOT/usr/bin/netscape-navigator
-ln -s ../lib/netscape/netscape-communicator $RPM_BUILD_ROOT/usr/bin/netscape-communicator
+ln -s ../lib/netscape/netscape-navigator $RPM_BUILD_ROOT%{_bindir}/netscape-navigator
+ln -s ../lib/netscape/netscape-communicator $RPM_BUILD_ROOT%{_bindir}/netscape-communicator
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -134,7 +134,7 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_libdir}/netscape
 %dir %{_libdir}/netscape/plugins
 
-%attr(755, root, root) /usr/bin/netscape
+%attr(755, root, root) %{_bindir}/netscape
 %{_libdir}/netscape/*
 
 %files navigator
