@@ -425,7 +425,7 @@ install %{SOURCE19} $RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/zh_TW/Netscape
 
 %ifarch %{ix86}
 ln -sf ../lib/netscape/netscape-navigator $RPM_BUILD_ROOT%{_bindir}/netscape-navigator
-mv -f $RPM_BUILD_ROOT%{_libdir}/netscape/plugins/libnullplugin-dynMotif.so \
+mv -f $RPM_BUILD_ROOT%{_libdir}/netscape/libnullplugin-dynMotif.so \
    $RPM_BUILD_ROOT%{_libdir}/netscape/plugins
 mv -f $RPM_BUILD_ROOT%{_libdir}/netscape/{README,LICENSE} \
 	$RPM_BUILD_DIR/%{name}-%{version}/
