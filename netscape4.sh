@@ -29,7 +29,7 @@ esac
 if [ -x ${PREFIX}/bin/${which} ]; then
 
     if [ -z "$*" ]; then
-	HOMEPAGE="http://www.pld.org.pl"
+	HOMEPAGE="http://www.pld-linux.org"
 	if [ -f ${HOME}/.netscape/preferences.js ]; then
 	    if grep "browser.startup.homepage" \
 			${HOME}/.netscape/preferences.js > /dev/null; then
