@@ -7,12 +7,16 @@ Version:	4.77
 Release:	1
 Copyright:	Free
 Group:		X11/Applications/Networking
+Group(de):	X11/Applikationen/Netzwerkwesen
 Group(pl):	X11/Aplikacje/Sieciowe
 Source0:	ftp://ftp.netscape.com/pub/communicator/english/%{version}/unix/supported/linux22/complete_install/communicator-v%{_shortver}-us.x86-unknown-linux2.2.tar.gz
 Source1:	ftp://ftp.netscape.com/pub/communicator/english/%{version}/unix/supported/linux22/navigator_standalone/navigator-v%{_shortver}-us.x86-unknown-linux2.2.tar.gz
-Source2:	netscape.sh
-Source3:	netscape-communicator.desktop
-Source4:	netscape-navigator.desktop
+Source2:	%{name}.sh
+Source3:	%{name}-communicator.desktop
+Source4:	%{name}-navigator.desktop
+Source10:	Netscape.pl.ad
+# pl resources
+Source5:	ftp://ftp.linuxpl.org/Netscape/Netscape.bz2
 Requires:	lesstif
 BuildRequires:	libstdc++-compat
 Exclusivearch:	%{ix86}
@@ -26,12 +30,14 @@ Netscape navigator and communicator.
 
 %description -l pl
 Graficzna przegl±darka WWW Netscape Navigator oraz pakiet Netscape
-Communicator.
+Communicator. Pakiet ten zawiera polskie t³umaczenie X zasobów dla
+Netscape autorstwa Krzysztofa Szatanika <diabl0@linuxpl.org>.
 
 %package common
 Summary:	Code shared between navigator and communicator
 Summary(pl):	Pliki dzielone miêdzy navigator'em i communicator'em
 Group:		X11/Applications/Networking
+Group(de):	X11/Applikationen/Netzwerkwesen
 Group(pl):	X11/Aplikacje/Sieciowe
 
 %description common
@@ -48,6 +54,7 @@ Summary(de):	Netscape Communicator Internet Browser, Newsreader und  Mail-Client
 Summary(pl):	Netscape Communicator - przegl±darka WWW, czytki news oraz program pocztowy
 Summary(tr):	Netscape Communicator tarayýcý, haber okuyucu ve e-posta istemcisi
 Group:		X11/Applications/Networking
+Group(de):	X11/Applikationen/Netzwerkwesen
 Group(pl):	X11/Aplikacje/Sieciowe
 Requires:	netscape-common
 
@@ -74,6 +81,7 @@ Summary(de):	Netscape-Navigator-Internet-Browser
 Summary(pl):	Netscape Navigator - przegl±darka WWW 
 Summary(tr):	Netscape Navigator web tarayýcý
 Group:		X11/Applications/Networking
+Group(de):	X11/Applikationen/Netzwerkwesen
 Group(pl):	X11/Aplikacje/Sieciowe
 Requires:	netscape-common
 
@@ -99,9 +107,10 @@ rmdir communicator*
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_bindir}
-install -d $RPM_BUILD_ROOT%{_libdir}/netscape/{plugins,java/classes}
-install -d $RPM_BUILD_ROOT%{_applnkdir}/Network/WWW
+install -d $RPM_BUILD_ROOT%{_bindir} \
+	$RPM_BUILD_ROOT%{_libdir}/netscape/{plugins,java/classes} \
+	$RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/pl \
+	$RPM_BUILD_ROOT%{_applnkdir}/Network/WWW
 
 for I in *.nif; do
 	tar -C $RPM_BUILD_ROOT%{_libdir}/netscape -xzvf $I
@@ -123,6 +132,7 @@ install %{SOURCE2} $RPM_BUILD_ROOT%{_bindir}/netscape
 
 install %{SOURCE3} $RPM_BUILD_ROOT%{_applnkdir}/Network/WWW
 install %{SOURCE4} $RPM_BUILD_ROOT%{_applnkdir}/Network/WWW
+install %{SOURCE10} $RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/pl/Netscape
 
 mv $RPM_BUILD_ROOT%{_libdir}/netscape/libnullplugin-dynMotif.so \
    $RPM_BUILD_ROOT%{_libdir}/netscape/plugins
@@ -130,16 +140,19 @@ mv $RPM_BUILD_ROOT%{_libdir}/netscape/libnullplugin-dynMotif.so \
 ln -s ../lib/netscape/netscape-navigator $RPM_BUILD_ROOT%{_bindir}/netscape-navigator
 ln -s ../lib/netscape/netscape-communicator $RPM_BUILD_ROOT%{_bindir}/netscape-communicator
 
-mv $RPM_BUILD_ROOT%{_libdir}/netscape/{README,LICENSE,Netscape.ad} \
+mv $RPM_BUILD_ROOT%{_libdir}/netscape/{README,LICENSE} \
 	$RPM_BUILD_DIR/%{name}-%{version}/
+mv $RPM_BUILD_ROOT%{_libdir}/netscape/Netscape.ad \
+	$RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/Netscape
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files common
 %defattr(644,root,root,755)
-%doc README LICENSE Netscape.ad
+%doc README LICENSE
 %docdir %{_libdir}/netscape/nethelp
+%attr(755,root,root) %{_bindir}/netscape
 %dir %{_libdir}/netscape
 %dir %{_libdir}/netscape/nethelp
 %dir %{_libdir}/netscape/java
@@ -159,7 +172,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/netscape/plugins/*.jar
 %attr(755,root,root) %{_libdir}/netscape/plugins/*.so
 %{_libdir}/netscape/movemail-src/*
-%attr(755,root,root) %{_bindir}/netscape
+
+%{_libdir}/X11/app-defaults/Netscape
+%lang(pl) %{_libdir}/X11/app-defaults/pl/Netscape
 
 %files navigator
 %defattr(644,root,root,755)
