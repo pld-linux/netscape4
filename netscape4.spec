@@ -5,9 +5,8 @@ Summary(uk):	Netscape Navigator та Communicator
 Name:		netscape
 %ifarch ppc
 Version:	4.73
-%else
-Version:	4.8
 %endif
+Version:	4.8
 %define _shortver 48
 %define _registry %{version}.0.20020722
 Release:	4
@@ -76,6 +75,9 @@ Summary(sl):	Datoteke, ki si jih delita Netscape Navigator in Communicator
 Summary(sv):	Filer delade av Netscape Navigator och Communicator
 Summary(uk):	Сп╕льний код для нав╕гатора та комун╕катора
 Summary(zh_CN):	Netscape Navigator ╨м Communicator ╧╡оМ╣днд╪Ч║ё
+%ifarch ppc
+Version:	4.73
+%endif
 Group:		X11/Applications/Networking
 
 %description common
@@ -192,6 +194,9 @@ Summary(tr):	Netscape Communicator tarayЩcЩ, haber okuyucu ve e-posta istemcisi
 Summary(uk):	Netscape Communicator - броузер, ньюср╕дер та поштовий кл╕╓нт
 Summary(zh_CN):	Netscape Communicator ╣д╧╓╬ълв║ё
 Group:		X11/Applications/Networking
+%ifarch ppc
+Version:	4.73
+%endif
 Requires:	netscape-common
 
 %description communicator
