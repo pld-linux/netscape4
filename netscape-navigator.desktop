@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Netscape Navigator
 Name[ja]=ネットスケープナビゲータ
-#Name[ko]=낸봬�이프
+Name[ko]=낸봬이프
 Comment=Netscape Navigator World Wide Web Browser
 Comment[bg]=Netscape Навигатор
 Comment[br]=Merdeer Netscape
@@ -23,7 +23,7 @@ Comment[id]=Browser Netscape Navigator
 Comment[is]=Netscape Navigator vafri
 Comment[it]=Netscape Navigator
 Comment[ja]=ネットスケープナビゲータ - Webブラウザ
-#Comment[ko]=낸봬�이프 웹브라우저
+Comment[ko]=낸봬이프 웹브라우저
 Comment[lt]=Netscape Naršyklė
 Comment[nl]=Netscape Navigator
 Comment[no]=Netscape nettleser
