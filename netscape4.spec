@@ -7,8 +7,6 @@ Version:	4.79
 Release:	1
 License:	distributable
 Group:		X11/Applications/Networking
-Group(de):	X11/Applikationen/Netzwerkwesen
-Group(pl):	X11/Aplikacje/Sieciowe
 Source0:	ftp://ftp.netscape.com/pub/communicator/english/%{version}/unix/supported/linux22/complete_install/communicator-v%{_shortver}-us.x86-unknown-linux2.2.tar.gz
 Source1:	ftp://ftp.netscape.com/pub/communicator/english/%{version}/unix/supported/linux22/navigator_standalone/navigator-v%{_shortver}-us.x86-unknown-linux2.2.tar.gz
 Source2:	%{name}.sh
@@ -44,8 +42,6 @@ Netscape autorstwa Krzysztofa Szatanika <diabl0@linuxpl.org>.
 Summary:	Code shared between navigator and communicator
 Summary(pl):	Pliki dzielone miêdzy navigatorem i communicatorem
 Group:		X11/Applications/Networking
-Group(de):	X11/Applikationen/Netzwerkwesen
-Group(pl):	X11/Aplikacje/Sieciowe
 
 %description common
 Files shared between the Netscape Navigator and Netscape Communicator.
@@ -61,8 +57,6 @@ Summary(de):	Netscape Communicator Internet Browser, Newsreader und  Mail-Client
 Summary(pl):	Netscape Communicator - przegl±darka WWW, czytnik news oraz program pocztowy
 Summary(tr):	Netscape Communicator tarayýcý, haber okuyucu ve e-posta istemcisi
 Group:		X11/Applications/Networking
-Group(de):	X11/Applikationen/Netzwerkwesen
-Group(pl):	X11/Aplikacje/Sieciowe
 Requires:	netscape-common
 
 %description communicator
@@ -88,8 +82,6 @@ Summary(de):	Netscape-Navigator-Internet-Browser
 Summary(pl):	Netscape Navigator - przegl±darka WWW 
 Summary(tr):	Netscape Navigator web tarayýcý
 Group:		X11/Applications/Networking
-Group(de):	X11/Applikationen/Netzwerkwesen
-Group(pl):	X11/Aplikacje/Sieciowe
 Requires:	netscape-common
 
 %description navigator
