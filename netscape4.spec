@@ -1,13 +1,13 @@
 Summary:	Netscape navigator and communicator
 Summary(pl):	Netscape Navigator i Communicator
 Name:		netscape
-Version:	4.7
+Version:	4.72
 Release:	1
 Copyright:	Free
 Group:		X11/Applications/Networking
 Group(pl):	X11/Aplikacje/Sieciowe
-Source0:	ftp://ftp.netscape.com/pub/communicator/english/4.7/unix/unsupported/linux22/complete_install/communicator-v47-export.x86-unknown-linux2.2.tar.gz
-Source1:	ftp://ftp.netscape.com/pub/communicator/english/4.7/unix/unsupported/linux22/navigator_standalone/navigator-v47-export.x86-unknown-linux2.2.tar.gz
+Source0:	ftp://ftp.netscape.com/pub/communicator/english/4.72/unix/unsupported/linux22/complete_install/communicator-v472-export.x86-unknown-linux2.2.tar.gz
+Source1:	ftp://ftp.netscape.com/pub/communicator/english/4.72/unix/unsupported/linux22/navigator_standalone/navigator-v472-export.x86-unknown-linux2.2.tar.gz
 Source2:	netscape.sh
 #Source4:	netscape-communicator.wmconfig
 #Source5:	netscape-navigator.wmconfig
@@ -103,7 +103,7 @@ done
 mv $RPM_BUILD_ROOT%{_libdir}/netscape/netscape $RPM_BUILD_ROOT%{_libdir}/netscape/netscape-communicator
 cp -a vreg $RPM_BUILD_ROOT%{_libdir}/netscape
 cp -a *.jar $RPM_BUILD_ROOT%{_libdir}/netscape/java/classes
-echo 'Communicator,4.7.0.19990915,%{_libdir}/netscape' > /tmp/infile
+echo 'Communicator,4.72.0.20000131,%{_libdir}/netscape' > /tmp/infile
 ./vreg $RPM_BUILD_ROOT%{_libdir}/netscape/registry /tmp/infile
 rm -f /tmp/infile
 
