@@ -1,16 +1,32 @@
 #!/bin/sh
 
-PREFIX="/usr/X11R6/bin"
-if [ -x "${PREFIX}/netscape-communicator" ]; then
-	which="netscape-communicator"
-elif [ -x "${PREFIX}/netscape-navigator" ]; then
-	which="netscape-navigator"
-else
-	echo "Could not find neither netscape-communicator or navigator!"
-	exit 1
-fi
+PREFIX="/usr/X11R6"
 
-if [ -x ${PREFIX}/${which} ]; then
+MOZILLA_HOME=${PREFIX}/lib/netscape
+export MOZILLA_HOME
+
+case "$1" in
+    -COMMUNICATOR)
+	which="netscape-communicator"
+	shift
+	;;
+    -NAVIGATOR)
+	which="netscape-navigator"
+	shift
+	;;
+    *)
+	if [ -x "${PREFIX}/bin/netscape-communicator" ]; then
+		which="netscape-communicator"
+	elif [ -x "${PREFIX}/bin/netscape-navigator" ]; then
+		which="netscape-navigator"
+	else
+		echo "Could not find neither netscape-communicator or navigator!"
+		exit 1
+	fi
+	;;
+esac
+
+if [ -x ${PREFIX}/bin/${which} ]; then
 
     if [ -z "$*" ]; then
 	HOMEPAGE="http://www.pld.org.pl"
@@ -20,11 +36,11 @@ if [ -x ${PREFIX}/${which} ]; then
 		HOMEPAGE=""
 	    fi
 	fi
-	exec ${PREFIX}/${which} ${HOMEPAGE}
+	exec ${PREFIX}/bin/${which} ${HOMEPAGE}
     else
-	exec ${PREFIX}/${which} $*
+	exec ${PREFIX}/bin/${which} $*
     fi
 fi
 
-echo "An error occurred running $PREFIX/$which}."
+echo "An error occurred running $PREFIX/bin/$which}."
 
