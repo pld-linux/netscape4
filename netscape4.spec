@@ -40,10 +40,9 @@ Source18:	Netscape.ad.zh_CN
 Source19:	Netscape.ad.zh_TW
 # Source19-md5:	7340e80bbfb76f45aa80da783fc0eb18
 Requires:	lesstif
-BuildRequires:	libstdc++-compat
+BuildRequires:	compat-libstdc++-2.9
 ExclusiveArch:	%{ix86} ppc
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
 
 %description
 Netscape Navigator and Communicator.
