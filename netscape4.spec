@@ -39,7 +39,6 @@ Source18:	Netscape.ad.zh_CN
 # Source18-md5:	44a5c3d2fd277ac3ad4dedbc5f4796b2
 Source19:	Netscape.ad.zh_TW
 # Source19-md5:	7340e80bbfb76f45aa80da783fc0eb18
-BuildRequires:	compat-libstdc++-2.9
 Requires:	lesstif
 ExclusiveArch:	%{ix86} ppc
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
