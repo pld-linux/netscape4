@@ -146,9 +146,9 @@ e um editor de páginas Web).
 Communicator'ÏÍ.
 
 %description common -l sk
-Tento balík obsahuje súbory zdieµané prehliadaèom www stránok Netscape
-Navigator a skupinou nástrojov (www prehliadaè Navigator,
-e-mail klient, news prehliadaè a editor www stránok), oznaèenou
+Tento balík obsahuje súbory zdieµané prehliadaèom WWW stránok Netscape
+Navigator a skupinou nástrojov (WWW prehliadaè Navigator,
+e-mail klient, news prehliadaè a editor WWW stránok), oznaèenou
 Netscape Communicator.
 
 %description common -l sv
@@ -347,7 +347,7 @@ Netscape Navigator - ÜÔÏ ÏÂÏÚÒÅ×ÁÔÅÌØ World Wide Web. ïÎ ĞÏÄÄÅÒÖÉ×ÁÅÔ
 ÎÏ×ÅÊÛÉÅ ÓÔÁÎÄÁÒÔÙ HTML, Java, JavaScript É ÎÅËÏÔÏÒÙÅ ÔÁÂÌÉÃÙ ÓÔÉÌÅÊ.
 
 %description navigator -l sk
-Netscape Navigator je prehliadaè www stránok v sieti Internet.
+Netscape Navigator je prehliadaè WWW stránok v sieti Internet.
 Podporuje posledné HTML ¹tandardy, Javu, Javascript a tie¾
 niektoré zlo¾ky ¹tılov.
 
