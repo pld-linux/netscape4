@@ -6,7 +6,7 @@ Name:		netscape
 Version:	4.8
 %define _shortver 48
 %define _registry %{version}.0.20020722
-Release:	4
+Release:	5
 Epoch:		1
 License:	distributable
 Group:		X11/Applications/Networking
