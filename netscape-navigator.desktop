@@ -43,4 +43,5 @@ Icon=netscape.png
 Terminal=0
 Categories=Network;WebBrowser
 Type=Application
+Encoding=UTF-8
 # vi: encoding=utf-8

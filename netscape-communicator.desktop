@@ -12,4 +12,5 @@ Icon=netscape.png
 Terminal=0
 Categories=Network
 Type=Application
+Encoding=UTF-8
 # vi: encoding=utf-8
