@@ -6,11 +6,16 @@ Name:		netscape
 Version:	4.79
 %define _shortver 479
 %define _registry %{version}.0.20011017
-Release:	3
+Release:	4
 License:	distributable
 Group:		X11/Applications/Networking
+%ifarch %{ix86}
 Source0:	ftp://ftp.netscape.com/pub/communicator/english/%{version}/unix/supported/linux22/complete_install/communicator-v%{_shortver}-us.x86-unknown-linux2.2.tar.gz
 Source1:	ftp://ftp.netscape.com/pub/communicator/english/%{version}/unix/supported/linux22/navigator_standalone/navigator-v%{_shortver}-us.x86-unknown-linux2.2.tar.gz
+%endif
+%ifarch ppc
+Source0:	communicator-v473.ppclinux.tar.gz
+%endif
 Source2:	%{name}.sh
 Source3:	%{name}-communicator.desktop
 Source4:	%{name}-navigator.desktop
@@ -27,7 +32,7 @@ Source18:	Netscape.ad.zh_CN
 Source19:	Netscape.ad.zh_TW
 Requires:	lesstif
 BuildRequires:	libstdc++-compat
-Exclusivearch:	%{ix86}
+ExclusiveArch:	%{ix86} ppc
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -359,6 +364,11 @@ Netscape Communicator - це популярний web-броузер. В╕н п╕дтриму╓ останн╕
 
 %prep
 %setup -c -q
+
+%ifarch ppc
+mv -f netscape communicator
+%endif
+
 mv -f communic*/* .
 rmdir communicator*
 
@@ -369,24 +379,36 @@ install -d $RPM_BUILD_ROOT%{_bindir} \
 	$RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/{de,es,fr,ja,ko,pl,pt_BR,ru,zh_{CN,TW}} \
 	$RPM_BUILD_ROOT{%{_applnkdir}/Network/WWW,%{_pixmapsdir}}
 
+%ifarch %{ix86}
 for I in *.nif; do
 	tar -C $RPM_BUILD_ROOT%{_libdir}/netscape -xzvf $I
 done
-
 mv -f $RPM_BUILD_ROOT%{_libdir}/netscape/netscape $RPM_BUILD_ROOT%{_libdir}/netscape/netscape-communicator
+%endif
+
 cp -af vreg $RPM_BUILD_ROOT%{_libdir}/netscape
+
+%ifarch %{ix86}
 cp -af *.jar $RPM_BUILD_ROOT%{_libdir}/netscape/java/classes
 echo "Communicator,%_registry,%{_libdir}/netscape" > /tmp/infile
 ./vreg $RPM_BUILD_ROOT%{_libdir}/netscape/registry /tmp/infile
 rm -f /tmp/infile
+%endif
+%ifarch ppc
+cp -af java/classes/*.jar $RPM_BUILD_ROOT%{_libdir}/netscape/java/classes
+cp -af registry movemail XKeysymDB nethelp spell plugins $RPM_BUILD_ROOT%{_libdir}/netscape/
+install netscape-communicator $RPM_BUILD_ROOT%{_libdir}/netscape
+%endif
 
 # get the netscape-navigator binary now
+%ifarch %{ix86}
 tar xvzf %{SOURCE1} '*/netscape-v%{_shortver}.nif'
 tar xvzf navigator*/netscape-v%{_shortver}.nif netscape
-
 install netscape $RPM_BUILD_ROOT%{_libdir}/netscape/netscape-navigator
-install %{SOURCE2} $RPM_BUILD_ROOT%{_bindir}/netscape
+%endif
 
+
+install %{SOURCE2} $RPM_BUILD_ROOT%{_bindir}/netscape
 install %{SOURCE3} %{SOURCE4} $RPM_BUILD_ROOT%{_applnkdir}/Network/WWW
 install %{SOURCE5} $RPM_BUILD_ROOT%{_pixmapsdir}
 
@@ -401,23 +423,31 @@ install %{SOURCE17} $RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/ru/Netscape
 install %{SOURCE18} $RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/zh_CN/Netscape
 install %{SOURCE19} $RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/zh_TW/Netscape
 
-mv -f $RPM_BUILD_ROOT%{_libdir}/netscape/libnullplugin-dynMotif.so \
-   $RPM_BUILD_ROOT%{_libdir}/netscape/plugins
-
+%ifarch %{ix86}
 ln -sf ../lib/netscape/netscape-navigator $RPM_BUILD_ROOT%{_bindir}/netscape-navigator
-ln -sf ../lib/netscape/netscape-communicator $RPM_BUILD_ROOT%{_bindir}/netscape-communicator
-
+mv -f $RPM_BUILD_ROOT%{_libdir}/netscape/plugins/libnullplugin-dynMotif.so \
+   $RPM_BUILD_ROOT%{_libdir}/netscape/plugins
 mv -f $RPM_BUILD_ROOT%{_libdir}/netscape/{README,LICENSE} \
 	$RPM_BUILD_DIR/%{name}-%{version}/
 mv -f $RPM_BUILD_ROOT%{_libdir}/netscape/Netscape.ad \
 	$RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/Netscape
+%endif
+ln -sf ../lib/netscape/netscape-communicator $RPM_BUILD_ROOT%{_bindir}/netscape-communicator
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files common
 %defattr(644,root,root,755)
+%ifarch %{ix86}
 %doc README LICENSE
+%dir %{_libdir}/netscape/movemail-src
+%{_libdir}/netscape/movemail-src/*
+%{_libdir}/netscape/bookmark.htm
+%attr(755,root,root) %{_libdir}/netscape/*.so
+%{_libdir}/X11/app-defaults/Netscape
+%{_libdir}/netscape/plugins/*.class
+%endif
 %docdir %{_libdir}/netscape/nethelp
 %attr(755,root,root) %{_bindir}/netscape
 %dir %{_libdir}/netscape
@@ -425,22 +455,16 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_libdir}/netscape/java
 %dir %{_libdir}/netscape/spell
 %dir %{_libdir}/netscape/plugins
-%dir %{_libdir}/netscape/movemail-src
 %{_libdir}/netscape/XKeysymDB
-%{_libdir}/netscape/bookmark.htm
 %attr(755,root,root) %{_libdir}/netscape/movemail
-%attr(755,root,root) %{_libdir}/netscape/*.so
 %{_libdir}/netscape/registry
 %{_libdir}/netscape/vreg
 %{_libdir}/netscape/nethelp/*
 %{_libdir}/netscape/java/*
 %{_libdir}/netscape/spell/*
-%{_libdir}/netscape/plugins/*.class
 %{_libdir}/netscape/plugins/*.jar
 %attr(755,root,root) %{_libdir}/netscape/plugins/*.so
-%{_libdir}/netscape/movemail-src/*
 
-%{_libdir}/X11/app-defaults/Netscape
 %lang(de) %{_libdir}/X11/app-defaults/de/Netscape
 %lang(es) %{_libdir}/X11/app-defaults/es/Netscape
 %lang(fr) %{_libdir}/X11/app-defaults/fr/Netscape
@@ -453,11 +477,13 @@ rm -rf $RPM_BUILD_ROOT
 %lang(zh_TW) %{_libdir}/X11/app-defaults/zh_TW/Netscape
 %{_pixmapsdir}/netscape.png
 
+%ifarch %{ix86}
 %files navigator
 %defattr(644,root,root,755)
 %{_applnkdir}/Network/WWW/netscape-navigator.desktop
 %attr(755,root,root) %{_bindir}/netscape-navigator
 %attr(755,root,root) %{_libdir}/netscape/netscape-navigator
+%endif
 
 %files communicator
 %defattr(644,root,root,755)
