@@ -4,7 +4,7 @@ Name:		netscape
 Version:	4.79
 %define _shortver 479
 %define _registry %{version}.0.20001007
-Release:	1
+Release:	2
 License:	distributable
 Group:		X11/Applications/Networking
 Source0:	ftp://ftp.netscape.com/pub/communicator/english/%{version}/unix/supported/linux22/complete_install/communicator-v%{_shortver}-us.x86-unknown-linux2.2.tar.gz
@@ -20,8 +20,8 @@ Source14:	Netscape.ad.ko
 Source15:	Netscape.ad.pl
 Source16:	Netscape.ad.pt_BR
 Source17:	Netscape.ad.ru
-Source18:	Netscape.ad.zh_CN.gb2312
-Source19:	Netscape.ad.zh_TW.big5
+Source18:	Netscape.ad.zh_CN
+Source19:	Netscape.ad.zh_TW
 Requires:	lesstif
 BuildRequires:	libstdc++-compat
 Exclusivearch:	%{ix86}
@@ -108,7 +108,7 @@ rmdir communicator*
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_bindir} \
 	$RPM_BUILD_ROOT%{_libdir}/netscape/{plugins,java/classes} \
-	$RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/{de,es,fr,ja,ko,pl,pt_BR,ru,zh_{CN.gb2312,TW.big5}} \
+	$RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/{de,es,fr,ja,ko,pl,pt_BR,ru,zh_{CN,TW}} \
 	$RPM_BUILD_ROOT%{_applnkdir}/Network/WWW
 
 for I in *.nif; do
@@ -139,8 +139,8 @@ install %{SOURCE14} $RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/ko/Netscape
 install %{SOURCE15} $RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/pl/Netscape
 install %{SOURCE16} $RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/pt_BR/Netscape
 install %{SOURCE17} $RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/ru/Netscape
-install %{SOURCE18} $RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/zh_CN.gb2312/Netscape
-install %{SOURCE19} $RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/zh_TW.big5/Netscape
+install %{SOURCE18} $RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/zh_CN/Netscape
+install %{SOURCE19} $RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/zh_TW/Netscape
 
 mv -f $RPM_BUILD_ROOT%{_libdir}/netscape/libnullplugin-dynMotif.so \
    $RPM_BUILD_ROOT%{_libdir}/netscape/plugins
@@ -190,8 +190,8 @@ rm -rf $RPM_BUILD_ROOT
 %lang(pl) %{_libdir}/X11/app-defaults/pl/Netscape
 %lang(pt_BR) %{_libdir}/X11/app-defaults/pt_BR/Netscape
 %lang(ru) %{_libdir}/X11/app-defaults/ru/Netscape
-%lang(zh_CN.gb2312) %{_libdir}/X11/app-defaults/zh_CN.gb2312/Netscape
-%lang(zh_TW.big5) %{_libdir}/X11/app-defaults/zh_TW.big5/Netscape
+%lang(zh_CN) %{_libdir}/X11/app-defaults/zh_CN/Netscape
+%lang(zh_TW) %{_libdir}/X11/app-defaults/zh_TW/Netscape
 
 %files navigator
 %defattr(644,root,root,755)
