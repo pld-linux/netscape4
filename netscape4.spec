@@ -173,7 +173,7 @@ Summary:	Netscape Communicator internet browser, news reader, and mail client
 Summary(cs):	WWW prohlí¾eè Netscape Communicator, po¹tovní a NetNews klient
 Summary(de):	Netscape Communicator Internet Browser, Newsreader und  Mail-Client
 Summary(es):	Juego de herramientas Netscape Communicator
-Summary(fr):	Netscape Communicator, navigateur Internet, lecteur de news et client courrier.
+Summary(fr):	Netscape Communicator, navigateur Internet, lecteur de news et client courrier
 Summary(it):	Gamma di tool di Netscape Communicator
 Summary(ja):	Netscape Communicator ¥Ä¡¼¥ë¥»¥Ã¥È
 Summary(ko):	µµ±¸µéÀÇ Netscape Communicator ¼öÆ®
