@@ -33,13 +33,13 @@
 ! Modified: dp Suresh <dp@netscape.com>, 01-Aug-95
 ! Modified: snpf <snpf@netscape.com>, 23-Sep-96
 !
-!      ==========================================================
-!      NOTE: If you're looking here for things to customize, look
-!      on the Preferences dialogs under the Options menu first.
-!      Most things are customizable from there.  Things which are
-!      settable via the Preferences dialog boxes are stored in
-!      the ~/.netscape/preferences file, and not in X resources.
-!      ==========================================================
+!	==========================================================
+!	NOTE: If you're looking here for things to customize, look
+!	on the Preferences dialogs under the Options menu first.
+!	Most things are customizable from there.  Things which are
+!	settable via the Preferences dialog boxes are stored in
+!	the ~/.netscape/preferences file, and not in X resources.
+!	==========================================================
 !
 ! This file lists the default resources built in to Netscape.
 ! You can use the stuff in this file for examples of how to customize
@@ -187,7 +187,7 @@
 ! redirecting its output to stderr; for example, to do this to mpeg_play,
 ! you could add the following to your .mailcap file:
 !
-!        video/mpeg; mpeg_play %s 2>&-
+!	video/mpeg; mpeg_play %s 2>&-
 !
 ! Normally, Netscape captures both the stdout and stderr into the dialog box.
 ! If you find a need to let one or both of them continue on to the actual
@@ -203,7 +203,7 @@
 ! Each line in the encodingFilters resource consists of four fields,
 ! separated by colons and optional whitespace:
 !
-!   <input-encoding>  : <output-encoding> : <extensions> : <filter-command>
+!  <input-encoding>  : <output-encoding> : <extensions> : <filter-command>
 !
 ! input-encoding:  The MIME encoding from the Content-Transfer-Encoding header.
 !                  (The basic encodings 7BIT, 8BIT, BINARY, BASE64, and QUOTED-
@@ -347,13 +347,13 @@
 !
 ! Here's how you set the default sizes and positions of the Netscape windows:
 !
-! For the web browser window:   Netscape.Navigator.geometry: =500x700+100-0
-! For the mail reader:          Netscape.Mail.geometry: =500x800+200-0
-! For the news reader:          Netscape.News.geometry: =500x800+300-0
-! For the mail editor:          Netscape.Composition.geometry: =400x600
-! For the bookmarks window:     Netscape.Bookmarks.geometry: =300x900-0-0
-! For the address book window:  Netscape.AddressBook.geometry: =600x900-300-0
-! For the download windows:     Netscape.Download.geometry: =500x200-0-0
+! For the web browser window:	Netscape.Navigator.geometry: =500x700+100-0
+! For the mail reader:		Netscape.Mail.geometry: =500x800+200-0
+! For the news reader:		Netscape.News.geometry: =500x800+300-0
+! For the mail editor:		Netscape.Composition.geometry: =400x600
+! For the bookmarks window:	Netscape.Bookmarks.geometry: =300x900-0-0
+! For the address book window:	Netscape.AddressBook.geometry: =600x900-300-0
+! For the download windows:	Netscape.Download.geometry: =500x200-0-0
 !
 ! In previous versions of Netscape, we suggested setting the geometry on the
 ! TopLevelShell class; don't do that any more.  It will affect *all* of the
@@ -386,81 +386,81 @@
 ! These are installed on every widget which is a child of our Shell,
 ! and are not installed on popups/transients.
 !
-*globalTranslations:			#override					\n\
+*globalTranslations:	#override		\n\
 											\
-	      Ctrl ~Shift<Key>a:		xfeDoCommand(selectAll)				\n\
-	Meta ~Ctrl<Key>B:		xfeDoCommand(openBookmarks)			\n\
-	 Alt ~Ctrl<Key>B:		xfeDoCommand(openBookmarks)			\n\
-	      Ctrl<Key>C:		xfeDoCommand(copy)					\n\
-		Meta ~Ctrl<Key>D:		undefined-key()				\n\
-         Alt ~Ctrl<Key>D:		undefined-key()				\n\
-		Meta ~Ctrl<Key>E:		undefined-key()				\n\
-         Alt ~Ctrl<Key>E:		undefined-key()				\n\
-	Meta ~Ctrl ~Shift<Key>f:		undefined-key()				\n\
-	 Alt ~Ctrl ~Shift<Key>f:		undefined-key()				\n\
-		Meta ~Ctrl<Key>G:		undefined-key()				\n\
-		 Alt ~Ctrl<Key>G:		undefined-key()				\n\
-	Meta ~Ctrl<Key>H:		xfeDoCommand(openHistory)			\n\
-	 Alt ~Ctrl<Key>H:		xfeDoCommand(openHistory)			\n\
-		Meta ~Ctrl<Key>I:		undefined-key()				\n\
-		 Alt ~Ctrl<Key>I:		undefined-key()				\n\
-		Meta ~Ctrl<Key>J:		undefined-key()				\n\
-		 Alt ~Ctrl<Key>J:		undefined-key()				\n\
-	Meta ~Ctrl<Key>K:		xfeDoCommand(addBookmark)			\n\
-	 Alt ~Ctrl<Key>K:		xfeDoCommand(addBookmark)			\n\
-		Meta ~Ctrl<Key>L:		undefined-key()				\n\
-		 Alt ~Ctrl<Key>L:		undefined-key()				\n\
-	Meta ~Ctrl<Key>m:		xfeDoCommand(composeMessage)		\n\
-	 Alt ~Ctrl<Key>m:		xfeDoCommand(composeMessage)		\n\
-	Meta ~Ctrl ~Shift<Key>n: xfeDoCommand(openBrowser)			\n\
-	 Alt ~Ctrl ~Shift<Key>n: xfeDoCommand(openBrowser)			\n\
-	Meta ~Ctrl  Shift<Key>n: xfeDoCommand(newBlank)				\n\
-	 Alt ~Ctrl  Shift<Key>n: xfeDoCommand(newBlank)				\n\
-		Meta ~Ctrl<Key>O:		undefined-key()				\n\
-		 Alt ~Ctrl<Key>O:		undefined-key()				\n\
-		Meta ~Ctrl<Key>P:		undefined-key()				\n\
-		 Alt ~Ctrl<Key>P:		undefined-key()				\n\
-	Meta ~Ctrl<Key>Q:		xfeDoCommand(exit)					\n\
-	 Alt ~Ctrl<Key>Q:		xfeDoCommand(exit)					\n\
-		Meta ~Ctrl<Key>R:		undefined-key()				\n\
-		 Alt ~Ctrl<Key>R:		undefined-key()				\n\
-	Meta ~Ctrl<Key>S:		xfeDoCommand(saveAs)				\n\
-	 Alt ~Ctrl<Key>S:		xfeDoCommand(saveAs)				\n\
-		Meta ~Ctrl<Key>T:		undefined-key()				\n\
-		 Alt ~Ctrl<Key>T:		undefined-key()				\n\
-		Meta ~Ctrl<Key>U:	xfeDoCommand(viewPageSource)\n\
-		 Alt ~Ctrl<Key>U:		xfeDoCommand(viewPageSource)\n\
-	      Ctrl<Key>V:		xfeDoCommand(paste)					\n\
-	Meta ~Ctrl<Key>W:		xfeDoCommand(close)					\n\
-	 Alt ~Ctrl<Key>W:		xfeDoCommand(close)					\n\
-	      Ctrl<Key>X:		xfeDoCommand(cut)					\n\
-	Meta ~Ctrl<Key>Y:		xfeDoCommand(paste)					\n\
-	 Alt ~Ctrl<Key>Y:		xfeDoCommand(paste)					\n\
-		Meta ~Ctrl<Key>Z:		undefined-key()				\n\
-		 Alt ~Ctrl<Key>Z:		undefined-key()				\n\
-											\
- Meta ~Ctrl ~Shift<Key>1:	xfeDoCommand(openOrBringUpBrowser)	\n\
-  Alt ~Ctrl ~Shift<Key>1:	xfeDoCommand(openOrBringUpBrowser)	\n\
- Meta ~Ctrl  Shift<Key>1:	xfeDoCommand(openFolders)			\n\
-  Alt ~Ctrl  Shift<Key>1:	xfeDoCommand(openFolders)			\n\
- Meta ~Ctrl ~Shift<Key>2:	xfeDoCommand(openInbox)				\n\
-  Alt ~Ctrl ~Shift<Key>2:	xfeDoCommand(openInbox)				\n\
- Meta ~Ctrl  Shift<Key>2:	xfeDoCommand(openAddrBook)			\n\
-  Alt ~Ctrl  Shift<Key>2:	xfeDoCommand(openAddrBook)			\n\
-	Meta ~Ctrl<Key>3:		xfeDoCommand(openEditor)			\n\
-	 Alt ~Ctrl<Key>3:		xfeDoCommand(openEditor)			\n\
-	Meta ~Ctrl<Key>4:		xfeDoCommand(openCalendar)			\n\
-	 Alt ~Ctrl<Key>4:		xfeDoCommand(openCalendar)			\n\
-	Meta ~Ctrl<Key>5:		xfeDoCommand(openConference)		\n\
-	 Alt ~Ctrl<Key>5:		xfeDoCommand(openConference)		\n\
-	Meta ~Ctrl<Key>7:		xfeDoCommand(openRadio)				\n\
-	 Alt ~Ctrl<Key>7:		xfeDoCommand(openRadio)				\n\
-											\
-	~Meta ~Alt ~Ctrl<Key>Prior:		PageUp()					\n\
-	~Meta ~Alt ~Ctrl<Key>Next:		PageDown()					\n\
-	~Meta ~Alt ~Ctrl<Key>osfPageUp:		PageUp()				\n\
-	~Meta ~Alt ~Ctrl<Key>osfPageDown:	PageDown()				\n\
-											\
+Ctrl ~Shift<Key>a:		xfeDoCommand(selectAll)			\n\
+Meta ~Ctrl<Key>B:		xfeDoCommand(openBookmarks)		\n\
+Alt ~Ctrl<Key>B:		xfeDoCommand(openBookmarks)		\n\
+Ctrl<Key>C:			xfeDoCommand(copy)			\n\
+Meta ~Ctrl<Key>D:		undefined-key()				\n\
+Alt ~Ctrl<Key>D:		undefined-key()				\n\
+Meta ~Ctrl<Key>E:		undefined-key()				\n\
+Alt ~Ctrl<Key>E:		undefined-key()				\n\
+Meta ~Ctrl ~Shift<Key>f:	undefined-key()				\n\
+Alt ~Ctrl ~Shift<Key>f:		undefined-key()				\n\
+Meta ~Ctrl<Key>G:		undefined-key()				\n\
+Alt ~Ctrl<Key>G:		undefined-key()				\n\
+Meta ~Ctrl<Key>H:		xfeDoCommand(openHistory)		\n\
+Alt ~Ctrl<Key>H:		xfeDoCommand(openHistory)		\n\
+Meta ~Ctrl<Key>I:		undefined-key()				\n\
+Alt ~Ctrl<Key>I:		undefined-key()				\n\
+Meta ~Ctrl<Key>J:		undefined-key()				\n\
+Alt ~Ctrl<Key>J:		undefined-key()				\n\
+Meta ~Ctrl<Key>K:		xfeDoCommand(addBookmark)		\n\
+Alt ~Ctrl<Key>K:		xfeDoCommand(addBookmark)		\n\
+Meta ~Ctrl<Key>L:		undefined-key()				\n\
+Alt ~Ctrl<Key>L:		undefined-key()				\n\
+Meta ~Ctrl<Key>m:		xfeDoCommand(composeMessage)		\n\
+Alt ~Ctrl<Key>m:		xfeDoCommand(composeMessage)		\n\
+Meta ~Ctrl ~Shift<Key>n:	xfeDoCommand(openBrowser)		\n\
+Alt ~Ctrl ~Shift<Key>n:		xfeDoCommand(openBrowser)		\n\
+Meta ~Ctrl  Shift<Key>n:	xfeDoCommand(newBlank)			\n\
+Alt ~Ctrl  Shift<Key>n:		xfeDoCommand(newBlank)			\n\
+Meta ~Ctrl<Key>O:		undefined-key()				\n\
+Alt ~Ctrl<Key>O:		undefined-key()				\n\
+Meta ~Ctrl<Key>P:		undefined-key()				\n\
+Alt ~Ctrl<Key>P:		undefined-key()				\n\
+Meta ~Ctrl<Key>Q:		xfeDoCommand(exit)			\n\
+Alt ~Ctrl<Key>Q:		xfeDoCommand(exit)			\n\
+Meta ~Ctrl<Key>R:		undefined-key()				\n\
+Alt ~Ctrl<Key>R:		undefined-key()				\n\
+Meta ~Ctrl<Key>S:		xfeDoCommand(saveAs)			\n\
+Alt ~Ctrl<Key>S:		xfeDoCommand(saveAs)			\n\
+Meta ~Ctrl<Key>T:		undefined-key()				\n\
+Alt ~Ctrl<Key>T:		undefined-key()				\n\
+Meta ~Ctrl<Key>U:		xfeDoCommand(viewPageSource)		\n\
+Alt ~Ctrl<Key>U:		xfeDoCommand(viewPageSource)		\n\
+Ctrl<Key>V:			xfeDoCommand(paste)			\n\
+Meta ~Ctrl<Key>W:		xfeDoCommand(close)			\n\
+Alt ~Ctrl<Key>W:		xfeDoCommand(close)			\n\
+Ctrl<Key>X:			xfeDoCommand(cut)			\n\
+Meta ~Ctrl<Key>Y:		xfeDoCommand(paste)			\n\
+Alt ~Ctrl<Key>Y:		xfeDoCommand(paste)			\n\
+Meta ~Ctrl<Key>Z:		undefined-key()				\n\
+Alt ~Ctrl<Key>Z:		undefined-key()				\n\
+									\
+Meta ~Ctrl ~Shift<Key>1:	xfeDoCommand(openOrBringUpBrowser)	\n\
+Alt ~Ctrl ~Shift<Key>1:		xfeDoCommand(openOrBringUpBrowser)	\n\
+Meta ~Ctrl  Shift<Key>1:	xfeDoCommand(openFolders)		\n\
+Alt ~Ctrl  Shift<Key>1:		xfeDoCommand(openFolders)		\n\
+Meta ~Ctrl ~Shift<Key>2:	xfeDoCommand(openInbox)			\n\
+Alt ~Ctrl ~Shift<Key>2:		xfeDoCommand(openInbox)			\n\
+Meta ~Ctrl  Shift<Key>2:	xfeDoCommand(openAddrBook)		\n\
+Alt ~Ctrl  Shift<Key>2:		xfeDoCommand(openAddrBook)		\n\
+Meta ~Ctrl<Key>3:		xfeDoCommand(openEditor)		\n\
+Alt ~Ctrl<Key>3:		xfeDoCommand(openEditor)		\n\
+Meta ~Ctrl<Key>4:		xfeDoCommand(openCalendar)		\n\
+Alt ~Ctrl<Key>4:		xfeDoCommand(openCalendar)		\n\
+Meta ~Ctrl<Key>5:		xfeDoCommand(openConference)		\n\
+Alt ~Ctrl<Key>5:		xfeDoCommand(openConference)		\n\
+Meta ~Ctrl<Key>7:		xfeDoCommand(openRadio)			\n\
+Alt ~Ctrl<Key>7:		xfeDoCommand(openRadio)			\n\
+									\
+~Meta ~Alt ~Ctrl<Key>Prior:		PageUp()			\n\
+~Meta ~Alt ~Ctrl<Key>Next:		PageDown()			\n\
+~Meta ~Alt ~Ctrl<Key>osfPageUp:		PageUp()			\n\
+~Meta ~Alt ~Ctrl<Key>osfPageDown:	PageDown()			\n\
+									\
 	~Meta ~Alt ~Ctrl<Key>SunCopy:   xfeDoCommand(copy)			\n\
 	~Meta ~Alt ~Ctrl<Key>SunPaste:  xfeDoCommand(paste)			\n\
 	~Meta ~Alt ~Ctrl<Key>SunCut:    xfeDoCommand(cut)			\n\
@@ -1427,16 +1427,16 @@
 !
 ! Label Land
 !
-*Help.sensitive:			False
+*Help.sensitive:		False
 
 ! HTML forms "More..." button (options menus)
 *drawingArea*moreButton.labelString:	Wiêcej...
 
 ! Bookmarks "More..." cascade button
-*bookmarkMoreButton.labelString:		Wiêcej...
+*bookmarkMoreButton.labelString:	Wiêcej...
 
 ! Mail and news "More..." button
-*mailNewsMoreButton.labelString:		Wiêcej...
+*mailNewsMoreButton.labelString:	Wiêcej...
 
 !====================================================================
 !  Menubar stuff
@@ -1456,7 +1456,7 @@
 !*menuBar.viewMenu.mnemonic:		V
 
 *menuBar.goMenu.labelString:		Id¼ do
-!*menuBar.goMenu.mnemonic:			G
+!*menuBar.goMenu.mnemonic:		G
 
 *menuBar.messageMenu.labelString:	Wiadomo¶æ
 !*menuBar.messageMenu.mnemonic:		M
@@ -1465,10 +1465,10 @@
 !*menuBar.bookmarkMenu.mnemonic:	B
 
 *menuBar.windowMenuLite.labelString:	Okno
-!*menuBar.windowMenuLite.mnemonic:		W
+!*menuBar.windowMenuLite.mnemonic:	W
 *menuBar.windowMenu.labelString:	Komunikator
 !*menuBar.windowMenu.mnemonic:		C
-!*menuBar.windowMenu.fontList:	    -*-helvetica-bold-o-*-*-*-120-*--*-*-iso8859-2:*-r-*
+!*menuBar.windowMenu.fontList:		-*-helvetica-bold-o-*-*-*-120-*--*-*-iso8859-2:*-r-*
 
 *menuBar.itemMenu.labelString:		pozycja
 !*menuBar.itemMenu.mnemonic:		I
@@ -1485,9 +1485,9 @@
 *menuBar*newSubmenu.mnemonic:		N
 
 ! File/New Submenu
-*menuBar*openBrowser.labelString:       Okno nawigatora
-*menuBar*openBrowser.mnemonic:          N
-*menuBar*openBrowser.acceleratorText:   Alt+N
+*menuBar*openBrowser.labelString:	Okno nawigatora
+*menuBar*openBrowser.mnemonic:		N
+*menuBar*openBrowser.acceleratorText:	Alt+N
 *openBrowser.documentationString:		\
 Otwiera nowe okno przegl±darki
 
@@ -1527,46 +1527,45 @@ Otwiera plik lokalny lub stronê WWW w aktualnym oknie.
 
 *menuBar*recentSubmenu.labelString:	Otwórz ostatnie...
 
-*menuBar*saveMsg.labelString:       Zapisz
-*menuBar*saveMsg.mnemonic:       	S
-*menuBar*saveMsg.acceleratorText:   Alt+S
-*menuBar*saveAs.labelString:        Zapisz jako...
-*menuBar*saveMsgAs.labelString:     Zapisz jako
-*menuBar*saveMsgAs.mnemonic:	    S
+*menuBar*saveMsg.labelString:		Zapisz
+*menuBar*saveMsg.mnemonic:		S
+*menuBar*saveMsg.acceleratorText:	Alt+S
+*menuBar*saveAs.labelString:		Zapisz jako...
+*menuBar*saveMsgAs.labelString:		Zapisz jako
+*menuBar*saveMsgAs.mnemonic:		S
 
-*saveAsCmdString:					Zapisz jako...
-*saveFramesetAsCmdString:			Zapisz zestaw ramek jako...
-*menuBar*saveAs.mnemonic:           S
-*menuBar*saveAs.acceleratorText:    Alt+S
+*saveAsCmdString:			Zapisz jako...
+*saveFramesetAsCmdString		Zapisz zestaw ramek jako...
+*menuBar*saveAs.mnemonic:		S
+*menuBar*saveAs.acceleratorText:	Alt+S
 *saveAs.documentationString:		Zapisuje kopiê aktualnej strony.
 
 *menuBar*saveFrameAs.labelString:	Zapisz ramkê jako...
 *menuBar*saveFrameAs.mnemonic:		F
 *saveFrameAs.documentationString:	Zapisuje kopiê aktualnej ramki.
 
-*sendPage.labelString:				Wy¶lij stronê
-*sendPage.mnemonic:					d
+*sendPage.labelString:			Wy¶lij stronê
+*sendPage.mnemonic:			d
 *sendPage.documentationString:		Wysy³a aktualn± stronê do odbiorcy.
 
-*sendLink.labelString:				Wy¶lij adres
-*sendLink.mnemonic:					k
-*sendLink.documentationString:	\
-Wysy³a adres aktualnej strony do odbiorcy.
+*sendLink.labelString:			Wy¶lij adres
+*sendLink.mnemonic:			k
+*sendLink.documentationString:		Wysy³a adres aktualnej strony do odbiorcy.
 
-*editPageCmdString:		Edystuj stronê
-*editFrameCmdString:	Edytuj ramkê
-*editPage.labelString:              Edytuj stronê
-*editFrameSet.labelString:          Edytuj definicjê ramek
-*menuBar*editPage.mnemonic:         E
-*editPage.documentationString:      Edytuje aktualn± stronê lub definicjê ramek
+*editPageCmdString:			Edystuj stronê
+*editFrameCmdString:			Edytuj ramkê
+*editPage.labelString:			Edytuj stronê
+*editFrameSet.labelString:		Edytuj definicjê ramek
+*menuBar*editPage.mnemonic:		E
+*editPage.documentationString:		Edytuje aktualn± stronê lub definicjê ramek
 *menuBar*editFrame.labelString:		Edytuj ramkê
 *menuBar*editFrame.mnemonic:		F
-*editFrame.documentationString:     Edytuje aktualn± ramkê
+*editFrame.documentationString:		Edytuje aktualn± ramkê
 
 *menuBar*uploadFile.labelString:	Wy¶lij plik...
 *menuBar*uploadFile.mnemonic:		U
-*uploadFile.documentationString: Wysy³a plik na podany adres FTP
-
+*uploadFile.documentationString:	Wysy³a plik na podany adres FTP
+;
 *menuBar*printSetup.labelString:	Ustawienia drukowania...
 *menuBar*printSetup.mnemonic:		g
 *printSetup.documentationString:	Zmienia ustawienia drukowania...
@@ -1575,43 +1574,41 @@ Wysy³a adres aktualnej strony do odbiorcy.
 *menuBar*printPreview.mnemonic:		v
 *printPreview.documentationString:	Pokazuje podgl±d aktualnej strony.
 
-*menuBar*print.labelString:			Drukuj...
-*printCmdString:					Drukuj...
-*printFrameCmdString:				Drukuj ramkê...
-*menuBar*print.mnemonic:			P
-*menuBar*print.acceleratorText:		Alt+P
-*print.documentationString:			Drukuj t± stronê
+*menuBar*print.labelString:	Drukuj...
+*printCmdString:		Drukuj...
+*printFrameCmdString:		Drukuj ramkê...
+*menuBar*print.mnemonic:	P
+*menuBar*print.acceleratorText:	Alt+P
+*print.documentationString:	Drukuj t± stronê
 
-*menuBar*close.labelString:			Zamknij
-*menuBar*close.mnemonic:			C
-*menuBar*close.acceleratorText:		Alt+W
-*close.documentationString:			Zamknij to okno
+*menuBar*close.labelString:	Zamknij
+*menuBar*close.mnemonic:	C
+*menuBar*close.acceleratorText:	Alt+W
+*close.documentationString:	Zamknij to okno
 
-*menuBar*exit.labelString:			Wyjd¼
-*menuBar*exit.mnemonic:				x
-*menuBar*exit.acceleratorText:		Alt+Q
+*menuBar*exit.labelString:	Wyjd¼
+*menuBar*exit.mnemonic:		x
+*menuBar*exit.acceleratorText:	Alt+Q
 *exit.documentationString:	Zamyka wszystkie okna i wychodzi z programu.
 
 !===========================
 !  File Menu - Page Composer
 !===========================
 
-*menuBar*save.labelString:					Zapisz
-*menuBar*save.mnemonic:						S
-*menuBar*save.acceleratorText:				Alt+S
-*save.documentationString:					Zapiszuje aktualn± stronê
+*menuBar*save.labelString:	Zapisz
+*menuBar*save.mnemonic:		S
+*menuBar*save.acceleratorText:	Alt+S
+*save.documentationString:	Zapiszuje aktualn± stronê
 
 *Editor*menuBar*saveAs.acceleratorText:
 
-*menuBar*publish.labelString:				Opublikuj...
-*menuBar*publish.mnemonic:				    u
-*publish.documentationString:	\
-Wysy³a aktualny plik lub katalog na konto WWW
+*menuBar*publish.labelString:	Opublikuj...
+*menuBar*publish.mnemonic:	u
+*publish.documentationString:	Wysy³a aktualny plik lub katalog na konto WWW
 
-*menuBar*browsePage.labelString:            Przegl±daj stronê
-*menuBar*browsePage.mnemonic:	            B
-*browsePage.documentationString:	\
-Otwórz aktualny plik w oknie przegl±darki
+*menuBar*browsePage.labelString:	Przegl±daj stronê
+*menuBar*browsePage.mnemonic:		B
+*browsePage.documentationString:	Otwórz aktualny plik w oknie przegl±darki
 
 !=============================
 ! File Menu - Compose Message
@@ -1619,34 +1616,34 @@ Otwórz aktualny plik w oknie przegl±darki
 
 *Composition*save.documentationString:	Zapisz aktualn± wiadomo¶æ
 
-*Composition*toolBar*save*saveAs.labelString: Jako plik...
-*Composition*toolBar*save*saveAs.mnemonic: F
-*Composition*saveAs.documentationString: Zapisuje kopiê aktualnej wiadomo¶ci
+*Composition*toolBar*save*saveAs.labelString:	Jako plik...
+*Composition*toolBar*save*saveAs.mnemonic:	F
+*Composition*saveAs.documentationString:	Zapisuje kopiê aktualnej wiadomo¶ci
 
-*Composition*menuBar*saveAs.labelString:    Plik...
-*Composition*menuBar*saveAs.mnemonic:       F
+*Composition*menuBar*saveAs.labelString:	Plik...
+*Composition*menuBar*saveAs.mnemonic:		F
 *Composition*menuBar*saveAs.acceleratorText:
-*Composition*saveAs.documentationString: Zapisuje kopiê aktualnej wiadomo¶ci
+*Composition*saveAs.documentationString:	Zapisuje kopiê aktualnej wiadomo¶ci
 
 *Composition*toolBar*save*saveDraft.labelString: Jako do wys³ania
 *Composition*toolBar*save*saveDraft.mnemonic: D
 *Composition*toolBar*save*saveDraft.documentationString: Zapisz aktualn± wiadomo¶æ w katalogu "Do wys³ania" aby wys³aæ j± pó¼niej.
 
-*menuBar*saveDraft.labelString:       		Do wys³ania
-*menuBar*saveDraft.mnemonic:				D
+*menuBar*saveDraft.labelString:		Do wys³ania
+*menuBar*saveDraft.mnemonic:		D
 *saveDraft.documentationString:		Zapisz aktualn± wiadomo¶æ w katalogu "Do wys³ania" aby wys³aæ j± pó¼niej.
 
 *Composition*toolBar*save*saveTemplate.labelString: Jako wzorzec
 *Composition*toolBar*save*saveTemplate.mnemonic: T
 *Composition*toolBar*save*saveTemplate.documentationString: Zapisz t± wiadomo¶æ jako wzorzec do pó¼niejszego u¿ycia.
 
-*menuBar*saveTemplate.labelString:          Wzorzec
-*menuBar*saveTemplate.mnemonic:             T
-*saveTemplate.labelString:          Wzorzec
-*saveTemplate.mnemonic:             T
-*saveTemplate.documentationString:  	Zapisz t± wiadomo¶æ jako wzorzec do pó¼niejszego u¿ycia
-*menuBar*saveAsMenu.labelString:		        Zapisz jako
-*menuBar*saveAsMenu.mnemonic:			        A
+*menuBar*saveTemplate.labelString:	Wzorzec
+*menuBar*saveTemplate.mnemonic:		T
+*saveTemplate.labelString:		Wzorzec
+*saveTemplate.mnemonic:			T
+*saveTemplate.documentationString:	Zapisz t± wiadomo¶æ jako wzorzec do pó¼niejszego u¿ycia
+*menuBar*saveAsMenu.labelString:	Zapisz jako
+*menuBar*saveAsMenu.mnemonic:		A
 *menuBar*saveAsMenu.saveMessagesAs.documentationString:		Zapisz jako...
 
 *menuBar*saveMessage.labelString:		Zapisz
@@ -1670,25 +1667,25 @@ Otwórz aktualny plik w oknie przegl±darki
 Wstawia tekst strony jako cyctat do aktualnej wiadmo¶ci
 
 *menuBar*addresseePicker.labelString:		Wybierz odbiorców...
-*menuBar*addresseePicker.mnemonic:			t
+*menuBar*addresseePicker.mnemonic:		t
 *addresseePicker.documentationString:		Wybierz adresy odbiorców
 *addresseePicker.tipString:			Wybierz adresy
 
-*autoComplOnCmdString:						Nie uzupe³niaj adresów
-*autoComplOffCmdString:						Uzupe³niaj adresy
+*autoComplOnCmdString:				Nie uzupe³niaj adresów
+*autoComplOffCmdString:				Uzupe³niaj adresy
 
 *menuBar*showComplPicker.labelString:		Poka¿ pasuj±ce adresy
 *menuBar*showComplPicker.mnemonic:		S
 *menuBar*showComplPicker.acceleratorText:	Alt+J
 *menuBar*autoComplOnOff.acceleratorText:	Alt+D
 !*showComplPicker.documentationString:		Poka¿ pasuj±ce adresy...
-!*showComplPicker.tipString:					Poka¿ pasuj±ce adresy...
+!*showComplPicker.tipString:			Poka¿ pasuj±ce adresy...
 
-*menuBar*attach.labelString:				Do³±cz
-*menuBar*attach.mnemonic:					A
-*attach.documentationString: 				Do³±cz stronê lub kartê ksi±¿ki adresowej do aktualnej wiadomo¶ci
-*menuBar*showChrome.labelString:            Poka¿
-*menuBar*showChrome.mnemonic:               S
+*menuBar*attach.labelString:		Do³±cz
+*menuBar*attach.mnemonic:		A
+*attach.documentationString: 		Do³±cz stronê lub kartê ksi±¿ki adresowej do aktualnej wiadomo¶ci
+*menuBar*showChrome.labelString:	Poka¿
+*menuBar*showChrome.mnemonic:		S
 
 *menuBar*floatingTaskBarClose.labelString:  Ruchomy panel
 
@@ -1696,20 +1693,19 @@ Wstawia tekst strony jako cyctat do aktualnej wiadmo¶ci
 !  File Menu - Message Center
 !============================
 
-*folderPrivileges.labelString:					Uprawnienia
-*newFolder.labelString:							Nowy katalog...
-*newFolderCmdString:							Nowy katalog...
-*newSubFolderCmdString:							Nowy podkatalog...
+*folderPrivileges.labelString:	Uprawnienia
+*newFolder.labelString:		Nowy katalog...
+*newFolderCmdString:		Nowy katalog...
+*newSubFolderCmdString:		Nowy podkatalog...
 ! sspitzer:  is category used anymore?  what is it?
-*newCategoryCmdString:							Nowa kategoria...
-*newNewsgroupCmdString:							Nowa grupa dyskusyjna...
+*newCategoryCmdString:		Nowa kategoria...
+*newNewsgroupCmdString:		Nowa grupa dyskusyjna...
 *newFolder.mnemonic:							w
-*newFolder.documentationString:	\
-Tworzy nowy katalog poczty lub grupy dyskusyjnej
+*newFolder.documentationString:	Tworzy nowy katalog poczty lub grupy dyskusyjnej
 
-*MailFolder*menuBar*openSelected.labelString: Otwórz
-*MailFolder*menuBar*openSelected.mnemonic: O
-*MailFolder*menuBar*openSelected.acceleratorText: Alt+O
+*MailFolder*menuBar*openSelected.labelString:		Otwórz
+*MailFolder*menuBar*openSelected.mnemonic:		O
+*MailFolder*menuBar*openSelected.acceleratorText:	Alt+O
 *MailFolder*menuBar*openSelected.documentationString: \
 Otwiera wybrany katalog poczty lub grupy dyskusyjnej
 *openFolder.labelString: Otwórz
@@ -1718,18 +1714,18 @@ Otwiera wybrany katalog poczty lub grupy dyskusyjnej
 *openFolder.documentationString: \
 Otwiera wybrany katalog poczty lub grupy dyskusyjnej
 
-*renameFolder.labelString:			Zmieñ nazwê katalogu...
-*renameFolder.mnemonic:				R
+*renameFolder.labelString:		Zmieñ nazwê katalogu...
+*renameFolder.mnemonic:			R
 *renameFolder.documentationString:	Zmienia nazwê aktualnego katalogu
 
-*menuBar*newMsgSubmenu.labelString:			Pobierz wiadomo¶ci
-*menuBar*newMsgSubmenu.mnemonic:			G
+*menuBar*newMsgSubmenu.labelString:	Pobierz wiadomo¶ci
+*menuBar*newMsgSubmenu.mnemonic:	G
 *newMessage.documentationString:	\
 Pobiera nowe wiadomo¶ci pocztowe i grup dyskusyjnych
 
 ! File/Get Messages Submenu
-*menuBar*getNewMessages.labelString:       	Pobierz nowe wiadomo¶ci
-*menuBar*getNewMessages.mnemonic: 		M
+*menuBar*getNewMessages.labelString:	Pobierz nowe wiadomo¶ci
+*menuBar*getNewMessages.mnemonic: 	M
 
 ! This label is generated dynamically from the preferences
 !*menuBar*getNextNNewMsgs.labelString:       Next 500
@@ -1763,14 +1759,14 @@ Otwiera wybrany za³±cznik
 
 ! File/Open Attachments Submenu is dynamically generated
 
-*editMessage.labelString:				Edytuj wiadomo¶æ jako now±
-*editMessage.mnemonic:					E
-*editMessage.documentationString:				Edytuj wiadomo¶æ
+*editMessage.labelString:		Edytuj wiadomo¶æ jako now±
+*editMessage.mnemonic:			E
+*editMessage.documentationString:	Edytuj wiadomo¶æ
 
-*menuBar*saveTemplate.labelString:		Wzorzec
-*menuBar*saveTemplate.mnemonic:			T
+*menuBar*saveTemplate.labelString:	Wzorzec
+*menuBar*saveTemplate.mnemonic:		T
 *menuBar*saveAsTemplate.labelString:	Wzorzec
-*menuBar*saveAsTemplate.mnemonic:		T
+*menuBar*saveAsTemplate.mnemonic:	T
 
 *menuBar*saveMessagesAs.labelString:	Plik
 *menuBar*saveMessagesAs.mnemonic:	F
@@ -1814,8 +1810,8 @@ Create a Directory Server [???]
 *menuBar*import.mnemonic:		I
 *AddressBook*import.documentationString:	\
 Importuje plik do ksi±¿ki adresowej
-*AddressBook*menuBar*saveAs.labelString:        Eksportuj...
-*AddressBook*menuBar*saveAs.mnemonic:        E
+*AddressBook*menuBar*saveAs.labelString:	Eksportuj...
+*AddressBook*menuBar*saveAs.mnemonic:		E
 *AddressBook*menuBar*toggleNavigationToolbar.labelString: Panel ksi±¿ki adresowej
 *AddressBook*menuBar*toggleNavigationToolbar.mnemonic: A
 *AddressBook*menuBar*abToggleABPane.labelString: Ksi±¿ka adresowa
@@ -1873,8 +1869,8 @@ Otwiera adres wybranej zak³adki w oknie przegl±darki
 *bookmarks*import.documentationString:	\
 Importuje inn± listê zak³adek do aktualnej listy
 
-*bookmarks*menuBar*addToToolbar.labelString:	    Dodaj zak³adkê do panela
-*bookmarks*menuBar*addToToolbar.mnemonic:			A
+*bookmarks*menuBar*addToToolbar.labelString:	Dodaj zak³adkê do panela
+*bookmarks*menuBar*addToToolbar.mnemonic:	A
 *bookmarks*addToToolbar.documentationString:	\
 Dodaje zak³adkê do panela osobistego
 
@@ -2270,9 +2266,9 @@ Ustawia domy¶lny zestaw znaków
 *toggleMenubar.documentationString:	\
 Pokazuje lub ukrywa panel menu
 
-*Editor*toggleNavigationToolbar.labelString:	Panel kompozycji
+*Editor*toggleNavigationToolbar.labelString:	Panel edycji
 *Editor*toggleNavigationToolbar.documentationString:	\
-Pokazuje lub ukrywa panel kompozycji
+Pokazuje lub ukrywa panel edycji
 
 *toggleFormatToolbar.labelString:	Panel formatowania
 *toggleFormatToolbar.documentationString:	\
@@ -3148,7 +3144,7 @@ Otwiera okno klienta pocztowego i sprawdza pocztê
 *openNewsgroups.documentationString:	\
 Otwiera listê grup dyskusyjnych
 
-*menuBar*openEditor.labelString:				Kompozytor
+*menuBar*openEditor.labelString:				Edytor
 *menuBar*openEditor.mnemonic:					C
 *menuBar*openEditor.acceleratorText:			Alt+3
 *openEditor.documentationString:	\
@@ -3461,55 +3457,55 @@ What will this folder contain?
 *menuBar*undoInsertTableCell.labelString:	Cofnij wstawienie komórki
 *menuBar*undoDeleteTableCell.labelString:	Cofnij skasowanie komórki
 
-*menuBar*redoNull.labelString:              Nic do ponowienia
-*menuBar*redoTyping.labelString:            Ponów pisanie
-*menuBar*redoAddText.labelString:           Ponów dodawanie tekstu
-*menuBar*redoDeleteText.labelString:        Ponów skasowanie tekstu
-*menuBar*redoCut.labelString:               Ponów wyciêcie
-*menuBar*redoPasteText.labelString:         Ponów wstawienie tekstu
-*menuBar*redoPasteHTML.labelString:         Ponów wstawienie kodu HTML
-*menuBar*redoPasteHREF.labelString:         Ponów wsyawienie odno¶nika
-*menuBar*redoChangeAttributes.labelString:  Ponów zmianê atrybutów
-*menuBar*redoIndent.labelString:            Ponów wciêcie
-*menuBar*redoParagraphAlign.labelString:    Ponów wyrównanie akapitu
-*menuBar*redoMorphContainer.labelString:    Ponów zmianê stylu akapitu
-*menuBar*redoInsertHorizRule.labelString:   Ponów wstawienie poziomej lini <HR>
-*menuBar*redoSetHorizRuleData.labelString:  Ponów zmianê w³a¶ciwo¶ci lini poziomej
-*menuBar*redoInsertImage.labelString:       Ponów wstawienie obrazka
-*menuBar*redoSetImageData.labelString:      Ponów zmianê w³a¶ciwo¶ci obrazka
-*menuBar*redoInsertBreak.labelString:       Ponów wstawienie koñca lini <BR>
-*menuBar*redoChangePageData.labelString:    Ponów zmianê w³a¶ciwo¶ci strony
-*menuBar*redoSetMetaData.labelString:       Ponów zmianê w³a¶ciow¶ci znaczników META
-*menuBar*redoDeleteMetaData.labelString:    Ponów skasowanie znaczników META
-*menuBar*redoInsertTarget.labelString:      Ponów wstawienie celu
-*menuBar*redoSetTargetData.labelString:     Ponów zmianê w³a¶ciwo¶ci celu
-*menuBar*redoInsertUnknownTag.labelString:  Ponów nieznany znacznik
-*menuBar*redoSetUnknownTagData.labelString: Ponów zmianê w³a¶cio¶ci nieznanego znacznika
-*menuBar*redoGroupOfChanges.labelString:    Ponów zmiany
-*menuBar*redoSetListData.labelString:       Ponów zmianê w³a¶ciwo¶ci listy
+*menuBar*redoNull.labelString:			Nic do ponowienia
+*menuBar*redoTyping.labelString:		Ponów pisanie
+*menuBar*redoAddText.labelString:		Ponów dodawanie tekstu
+*menuBar*redoDeleteText.labelString:		Ponów skasowanie tekstu
+*menuBar*redoCut.labelString:			Ponów wyciêcie
+*menuBar*redoPasteText.labelString:		Ponów wstawienie tekstu
+*menuBar*redoPasteHTML.labelString:		Ponów wstawienie kodu HTML
+*menuBar*redoPasteHREF.labelString:		Ponów wsyawienie odno¶nika
+*menuBar*redoChangeAttributes.labelString:	Ponów zmianê atrybutów
+*menuBar*redoIndent.labelString:		Ponów wciêcie
+*menuBar*redoParagraphAlign.labelString:	Ponów wyrównanie akapitu
+*menuBar*redoMorphContainer.labelString:	Ponów zmianê stylu akapitu
+*menuBar*redoInsertHorizRule.labelString:	Ponów wstawienie poziomej lini <HR>
+*menuBar*redoSetHorizRuleData.labelString:	Ponów zmianê w³a¶ciwo¶ci lini poziomej
+*menuBar*redoInsertImage.labelString:		Ponów wstawienie obrazka
+*menuBar*redoSetImageData.labelString:		Ponów zmianê w³a¶ciwo¶ci obrazka
+*menuBar*redoInsertBreak.labelString:		Ponów wstawienie koñca lini <BR>
+*menuBar*redoChangePageData.labelString:	Ponów zmianê w³a¶ciwo¶ci strony
+*menuBar*redoSetMetaData.labelString:		Ponów zmianê w³a¶ciow¶ci znaczników META
+*menuBar*redoDeleteMetaData.labelString:	Ponów skasowanie znaczników META
+*menuBar*redoInsertTarget.labelString:		Ponów wstawienie celu
+*menuBar*redoSetTargetData.labelString:		Ponów zmianê w³a¶ciwo¶ci celu
+*menuBar*redoInsertUnknownTag.labelString:	Ponów nieznany znacznik
+*menuBar*redoSetUnknownTagData.labelString:	Ponów zmianê w³a¶cio¶ci nieznanego znacznika
+*menuBar*redoGroupOfChanges.labelString:	Ponów zmiany
+*menuBar*redoSetListData.labelString:		Ponów zmianê w³a¶ciwo¶ci listy
 *menuBar*redoInsertTable.labelString:		Ponów wstawienie tabeli
 *menuBar*redoDeleteTable.labelString:		Ponów skasowanie tabeli
 *menuBar*redoSetTableData.labelString:		Ponów zmianê w³a¶ciwo¶ci tabeli
 ![nn]
-*menuBar*redoInsertTableCaption.labelString: Redo Insert Caption
-*menuBar*redoSetTableCaptionData.labelString: Redo Set Caption Data
-*menuBar*redoDeleteTableCaption.labelString: Redo Delete Caption
+*menuBar*redoInsertTableCaption.labelString:	Redo Insert Caption
+*menuBar*redoSetTableCaptionData.labelString:	Redo Set Caption Data
+*menuBar*redoDeleteTableCaption.labelString:	Redo Delete Caption
 *menuBar*redoInsertTableRow.labelString:	Ponów wstawienie rzêdu
 *menuBar*redoSetTableRowData.labelString:	Ponów zmianê w³a¶ciwo¶ci rzêdu
 *menuBar*redoDeleteTableRow.labelString:	Ponów skasowanie rzêdu
-*menuBar*redoInsertTableColumn.labelString: Ponów wstawienie kolumny
+*menuBar*redoInsertTableColumn.labelString:	Ponów wstawienie kolumny
 *menuBar*redoSetTableCellData.labelString:	Ponów zmianê w³a¶ciwo¶ci komórki
-*menuBar*redoDeleteTableColumn.labelString: Ponów skasowanie kolumny
+*menuBar*redoDeleteTableColumn.labelString:	Ponów skasowanie kolumny
 *menuBar*redoInsertTableCell.labelString:	Ponów wstawienie komórki
 *menuBar*redoDeleteTableCell.labelString:	Ponów skasowanie komórku
 ! new
 
 
 ! View Menu
-*Editor*menuBar*source.labelString:		        Poka¿ kod ¼ród³owy
+*Editor*menuBar*source.labelString:		Poka¿ kod ¼ród³owy
 *Editor*menuBar*source.mnemonic:                S
-*menuBar*editSource.labelString:			Edytuj kod ¼ród³owy
-*menuBar*editSource.mnemonic:		            E
+*menuBar*editSource.labelString:		Edytuj kod ¼ród³owy
+*menuBar*editSource.mnemonic:			E
 *menuBar*paragraphMarks.labelString:		Display Paragraph Marks
 *menuBar*paragraphMarks.mnemonic:		        P
 !*displayTableBoundaries.labelString:           Display Table Boundaries
@@ -3517,26 +3513,26 @@ What will this folder contain?
 *displayTables.mnemonic:                        T
 ![nn]
 ! new
-*menuBar*toggleComposeToolbar.labelString:              Panel kompozycji
+*menuBar*toggleComposeToolbar.labelString:	Panel edycji
 ![nn]
-*menuBar*toggleComposeToolbar.mnemonic:			C
-*menuBar*toggleFormatToolbar.mnemonic:			F
-*menuBar*toggleFormatToolbar.labelString:		Panel formatowania
-*menuBar*toggleTableBorders.labelString:		Krawêdzie tabeli
-*menuBar*toggleTableBorders.mnemonic:			B
+*menuBar*toggleComposeToolbar.mnemonic:		C
+*menuBar*toggleFormatToolbar.mnemonic:		F
+*menuBar*toggleFormatToolbar.labelString:	Panel formatowania
+*menuBar*toggleTableBorders.labelString:	Krawêdzie tabeli
+*menuBar*toggleTableBorders.mnemonic:		B
 
 ! Insert Menu
 ! new
-*menuBar*insertMenu.labelString:				Wstaw
-*menuBar*insertListMenu.labelString:			Listê
-*menuBar*insertBulletedList.labelString:		Listê punktowan±
-*menuBar*insertNumberedList.labelString:		Listê numerowan±
-*insertTableRow.labelString:                    Rz±d
-*insertTableRow.mnemonic:                       R
-*insertTableRow.documentationString:            Wstaw nowy rz±d do tabeli
-*insertTableColumn.labelString:                 Kolumnê
-*insertTableColumn.mnemonic:                    o
-*insertTableColumn.documentationString:        Wstaw now± kolumnê do tasbeli
+*menuBar*insertMenu.labelString:		Wstaw
+*menuBar*insertListMenu.labelString:		Listê
+*menuBar*insertBulletedList.labelString:	Listê punktowan±
+*menuBar*insertNumberedList.labelString:	Listê numerowan±
+*insertTableRow.labelString:			Rz±d
+*insertTableRow.mnemonic:			R
+*insertTableRow.documentationString:		Wstaw nowy rz±d do tabeli
+*insertTableColumn.labelString:			Kolumnê
+*insertTableColumn.mnemonic:			o
+*insertTableColumn.documentationString:		Wstaw now± kolumnê do tasbeli
 *insertTableCell.labelString:                   Komórkê
 *insertTableCell.mnemonic:                      C
 *insertTableCell.documentationString:           Wstaw now± komórkê do tabeli
@@ -4511,8 +4507,8 @@ wtyczki Mozilla i/lub programy pomocnicze Mozilla.
 *bookmarks.iconName:		Zak³adki
 *AddressBook.title:			Mozilla: Ksi±¿ka adresowa
 *AddressBook.iconName:		Ksi±¿ka adresowa
-*Editor.title:				Mozilla: Kompozytor
-*Editor.iconName:			Kompozytor
+*Editor.title:				Mozilla: Edytor
+*Editor.iconName:			Edytor
 *MailFolder.title:			Mozilla: Centrum wiadomo¶ci
 *MailFolder.iconName:		Centrum wiadomo¶ci
 *AWTapp.iconName:           Konsola Java
@@ -4532,7 +4528,7 @@ wtyczki Mozilla i/lub programy pomocnicze Mozilla.
 *popup.openFrameInWindow.labelString:	Otwórz ramkê w oknie
 *popup.openFrameInWindow.mnemonic:		 i
 ![nn]
-*popup.editLink.labelString:			Otwórz odno¶nik w Kompozytorze
+*popup.editLink.labelString:			Otwórz odno¶nik w edytorze
 *popup.editLink.mnemonic:				 e
 !                                       ------------------------
 ! back
@@ -4994,7 +4990,7 @@ niepowo³anym bêdzie dla ciebie bezpieczniej przerwaæ przerwaæ wysy³anie.
 *printSetup*a4Toggle.labelString:		A4 (210 x 297 mm)
 *printSetup*OK.labelString:			Drukuj
 *printSetup*OkLabelString:			Drukuj
-*printSetup*CancelLabelString:			Poniechaj
+*printSetup*CancelLabelString:			Zaniechaj
 *printSetup*XmLabel.alignment:			ALIGNMENT_END
 *printSetup*XmLabelGadget.alignment:		ALIGNMENT_END
 *printSetup*XmToggleButtonGadget.alignment:	ALIGNMENT_BEGINNING
@@ -5059,7 +5055,7 @@ the local file you would like to open:
 *openURLDialog*choose.labelString:		Wybierz plik...
 *openURLDialog*toolLabel.labelString:		Otwórz adres lub plik w:
 *openURLDialog*browserToggle.labelString:	Nawigatorze
-*openURLDialog*editorToggle.labelString:	Kompozytorze
+*openURLDialog*editorToggle.labelString:	Edytorze
 *openURLDialog*OK.labelString:			Otwórz
 *openURLDialog*OkLabelString:			Otwórz
 *openURLDialog*Apply.labelString:		Wyczy¶æ
@@ -5072,18 +5068,18 @@ the local file you would like to open:
 *openURLDialog*browserToggle.set:		True
 *openURLDialog*XmTextField.columns:		45
 !*openURLDialog.width:				500
-*openURLDialog*openInEditor.labelString: Otwórz w Kompozytorze
-*openURLDialog*openInBrowser.labelString: Otwórz w Nawigatorze
+*openURLDialog*openInEditor.labelString:	Edytuj
+*openURLDialog*openInBrowser.labelString:	Otwórz
 
-*message_popup.title:			Mozilla
-*message_popup*OK.labelString:	OK
-*message_popup*OkLabelString:	OK
+*message_popup.title:				Mozilla
+*message_popup*OK.labelString:			OK
+*message_popup*OkLabelString:			OK
 
 *error_popup.title:			Mozilla: B³±d
 
 *question_popup.title:			Mozilla: Pytanie
 *question_popup*OK.labelString:	OK
-*question_popup*Cancel.labelString:	Poniechaj
+*question_popup*Cancel.labelString:	Zaniechaj
 
 *prompt_popup.title:			Mozilla: Pytanie
 *password_popup.title:			Mozilla: Has³o
@@ -5119,7 +5115,7 @@ Je¶li chcesz go podaæ, proszê wpisaæ go teraz.
 
 *dialog*OK.labelString:			OK
 *dialog*clear.labelString:		Wyczy¶æ
-*dialog*Cancel.labelString:		Poniechaj
+*dialog*Cancel.labelString:		Zaniechaj
 *dialog*userLabel.labelString:		Identyfikator:
 *dialog*passwdLabel.labelString:	Has³o:
 *dialog*userLabel.alignment:		ALIGNMENT_END
@@ -5129,7 +5125,7 @@ Je¶li chcesz go podaæ, proszê wpisaæ go teraz.
 *dialog*dialogform*pwtext.columns: 50
 
 *clear.labelString:			Wyczy¶æ
-*cancel.labelString:			Poniechaj
+*cancel.labelString:			Zaniechaj
 *OK.labelString:			OK
 
 *citationQuery_popup.title:		Pytanie o styl cytatu
@@ -5146,8 +5142,8 @@ Czy chcesz wys³aæ ten dokument jako za³±cznik??\n
 *citationQuery*OkLabelString:		Wy¶lij jako\nza³±cznik tekstowy
 *citationQuery*Apply.labelString:	Wy¶lij jako\ncytat
 *citationQuery*ApplyLabelString:	Wy¶lij jako\ncytat
-*citationQuery*Cancel.labelString:	Poniechaj
-*citationQuery*CancelLabelString:	Poniechaj
+*citationQuery*Cancel.labelString:	Zaniechaj
+*citationQuery*CancelLabelString:	Zaniechaj
 
 *doubleCitationQuery_popup.title:	Pytanie o styl cytatu
 *doubleCitationQuery.selectionLabelString:	\n\
@@ -5161,8 +5157,8 @@ Chcesz wys³aæ ten dokument jako cytat czy jako za³±cznik?
 *doubleCitationQuery*OkLabelString:	Wy¶lij jako\nza³±cznik tekstowy
 *doubleCitationQuery*Apply.labelString:	Wy¶lij jako\nCytat
 *doubleCitationQuery*ApplyLabelString:	Wy¶lij jako\nCytat
-*doubleCitationQuery*Cancel.labelString:Poniechaj
-*doubleCitationQuery*CancelLabelString:	Poniechaj
+*doubleCitationQuery*Cancel.labelString:Zaniechaj
+*doubleCitationQuery*CancelLabelString:	Zaniechaj
 
 *streamingAudioQuery_popup.title:	Pytanie o d¼wiêk
 *streamingAudioQuery.selectionLabelString:	\
@@ -5172,15 +5168,15 @@ dane prosto z sieci czy zapisaæ na dysk jako plik i dopiero wtedy odtworzyæ z pl
 *streamingAudioQuery*OkLabelString:	Graj prosto z sieci
 *streamingAudioQuery*Apply.labelString:	Pierw zapisz
 *streamingAudioQuery*ApplyLabelString:	Pierw zapisz
-*streamingAudioQuery*Cancel.labelString:Poniechaj
-*streamingAudioQuery*CancelLabelString:	Poniechaj
+*streamingAudioQuery*Cancel.labelString:Zaniechaj
+*streamingAudioQuery*CancelLabelString:	Zaniechaj
 
 *fileSelector*filterLabelString:	Filtr
 *fileSelector*dirListLabelString:	Katalogi
 *fileSelector*fileListLabelString:	Pliki
 *fileSelector*OkLabelString:	OK
 *fileSelector*ApplyLabelString:	Filter
-*fileSelector*CancelLabelString:	Poniechaj
+*fileSelector*CancelLabelString:	Zaniechaj
 *fileSelector.Selection.labelString:	Wybór
 *fileSelector.pattern:			*.html
 *fileSelector*fileTypeMask:		FILE_ANY_TYPE
@@ -5276,7 +5272,7 @@ dane prosto z sieci czy zapisaæ na dysk jako plik i dopiero wtedy odtworzyæ z pl
 *mc_ccbtn.labelString:		Cc:
 *mc_bccbtn.labelString:		Bcc:
 *mc_okbtn.labelString:		OK
-*mc_cancelbtn.labelString:	Poniechaj
+*mc_cancelbtn.labelString:	Zaniechaj
 
 ! Address Book popup menu. It has the same name as the main popup menu
 ! and hence shares the rest of the resources.
@@ -6337,7 +6333,7 @@ Przeci±gnij tutaj dokument aby do³±czyæ go do wiadomo¶ci.
 *prefs*appearance*navigator.labelString:	Nawigatora
 *prefs*appearance*messenger.labelString:	Mened¿era poczty
 *prefs*appearance*collabra.labelString:		Grupy dyskusyjne
-*prefs*appearance*composer.labelString:		Kompozytora
+*prefs*appearance*composer.labelString:		Edytora
 *prefs*appearance*conference.labelString:	Konferencje
 *prefs*appearance*netcaster.labelString:	Netcaster
 *prefs*appearance*calendar.labelString:		Kalendarz
@@ -7054,7 +7050,7 @@ pobrania.
 *pref.htmlmail:                     Formatowanie
 *pref.readreceipts:                 Potwierdzenia
 *pref.diskSpace:					Przestrzeñ dyskowa
-*pref.editor:						Kompozytor
+*pref.editor:						Edytor
 *pref.editorAppearance:				Kolory nowych stron
 *pref.editorPublish:				Publikacja
 *pref.offline:						Bez po³±czenia
@@ -7185,7 +7181,7 @@ pobrania.
 *Navigator*toolBox*Tab1.tipString:		Panel adresowy
 *Navigator*toolBox*Tab2.tipString:		Panel osobisty
 
-*Editor*toolBox*Tab0.tipString:			Panel kompozycji
+*Editor*toolBox*Tab0.tipString:			Panel edycji
 *Editor*toolBox*Tab1.tipString:			Panel formatowania
 
 *Composition*toolBox*Tab0.tipString:	Panel wiadomo¶ci
@@ -7208,8 +7204,8 @@ pobrania.
 *Navigator*toolBox*Tab1.documentationString:		Panel adresowy
 *Navigator*toolBox*Tab2.documentationString:		Panel osobiosty
 
-*Editor*toolBox*Tab0.documentationString:			Panel kompozycji
-*Editor*toolBox*Tab1.documentationString:			Panel formatowania
+*Editor*toolBox*Tab0.documentationString:		Panel edytora
+*Editor*toolBox*Tab1.documentationString:		Panel formatowania
 
 *Composition*toolBox*Tab0.documentationString:	Panel wiadomo¶ci
 *Composition*toolBox*Tab1.documentationString:	Panel adresowania
@@ -7224,51 +7220,51 @@ pobrania.
 *MailMsg*toolBox*Tab0.documentationString:		Panel wiadomo¶ci
 *MailMsg*toolBox*Tab1.documentationString:		Panel adresowy
 
-*toolBox*Tab0.documentationString:				Panel nawigacyjny
-*toolBox*Tab1.documentationString:				Panel aresowy
+*toolBox*Tab0.documentationString:			Panel nawigacyjny
+*toolBox*Tab1.documentationString:			Panel aresowy
 
 !! Number of pixels to move an item before swapping
-*toolBox.swapThreshold:					10
+*toolBox.swapThreshold:			10
 
 !! Maximum number of pixels an item can be dragged (for one mouse motion)
-*toolBox.dragThreshold:					10
+*toolBox.dragThreshold:			10
 
-*toolBox.marginLeft:					0
-*toolBox.marginRight:					0
-*toolBox.marginTop:						0
-*toolBox.marginBottom:					0
+*toolBox.marginLeft:			0
+*toolBox.marginRight:			0
+*toolBox.marginTop:			0
+*toolBox.marginBottom:			0
 
 !!
 !! *toolBar
 !!
-*toolBarItem.shadowType:				shadow_out
-*toolBarItem.shadowThickness:			1
-*toolBarItem.marginLeft:				1
-*toolBarItem.marginRight:				1
-*toolBarItem.marginTop:					1
-*toolBarItem.marginBottom:				1
+*toolBarItem.shadowType:		shadow_out
+*toolBarItem.shadowThickness:		1
+*toolBarItem.marginLeft:		1
+*toolBarItem.marginRight:		1
+*toolBarItem.marginTop:			1
+*toolBarItem.marginBottom:		1
 
-*toolBar*XfeButton.marginBottom:		1
-*toolBar*XfeButton.marginLeft:			1
-*toolBar*XfeButton.marginRight:			1
-*toolBar*XfeButton.marginTop:			1
-*toolBar*XfeButton.shadowThickness:		1
+*toolBar*XfeButton.marginBottom:	1
+*toolBar*XfeButton.marginLeft:		1
+*toolBar*XfeButton.marginRight:		1
+*toolBar*XfeButton.marginTop:		1
+*toolBar*XfeButton.shadowThickness:	1
 
-*toolBar*XfeCascade.marginBottom:		1
-*toolBar*XfeCascade.marginLeft:			1
-*toolBar*XfeCascade.marginRight:		1
-*toolBar*XfeCascade.marginTop:			1
+*toolBar*XfeCascade.marginBottom:	1
+*toolBar*XfeCascade.marginLeft:		1
+*toolBar*XfeCascade.marginRight:	1
+*toolBar*XfeCascade.marginTop:		1
 *toolBar*XfeCascade.shadowThickness:	1
 
 *toolBar*XmSeparator.shadowThickness:	0
-*toolBar*XmSeparator.width:				20
-*toolBar*XmSeparator.height:			2
-*toolBar*XmSeparator.orientation:		horizontal
+*toolBar*XmSeparator.width:		20
+*toolBar*XmSeparator.height:		2
+*toolBar*XmSeparator.orientation:	horizontal
 
-*toolBar*armOffset:						1
-*toolBar*fillOnEnter:					false
-*toolBar*raiseForeground:				Blue
-*toolBar*fontList:						-*-helvetica-medium-r-*-*-*-120-*-*-*-*-iso8859-2:*-r-*
+*toolBar*armOffset:				1
+*toolBar*fillOnEnter:				false
+*toolBar*raiseForeground:			Blue
+*toolBar*fontList:				-*-helvetica-medium-r-*-*-*-120-*-*-*-*-iso8859-2:*-r-*
 
 *toolBar.spacing:						0
 *toolBar.shadowThickness:				0
@@ -7340,72 +7336,72 @@ pobrania.
 !!
 !! *dashBoard*progressBar
 !!
-*dashBoard*progressBar.shadowType:					shadow_in
-*dashBoard*progressBar.shadowThickness:				1
-*dashBoard*progressBar.fontList:					-*-helvetica-medium-r-*-*-*-120-*-*-*-*-iso8859-2:*-r-*
-*dashBoard*progressBar.width:						100
+*dashBoard*progressBar.shadowType:			shadow_in
+*dashBoard*progressBar.shadowThickness:			1
+*dashBoard*progressBar.fontList:			-*-helvetica-medium-r-*-*-*-120-*-*-*-*-iso8859-2:*-r-*
+*dashBoard*progressBar.width:				100
 
 !! The color of the progress bar
-*dashBoard*progressBar.barColor:					Gray60
+*dashBoard*progressBar.barColor:			Gray60
 
 !! The about the cylon moves on each tick
-*dashBoard*progressBar.cylonOffset:					2
+*dashBoard*progressBar.cylonOffset:			2
 
 !! The interval in msec between cylon ticks
-*dashBoard*progressBar.cylonInterval:				100
+*dashBoard*progressBar.cylonInterval:			100
 
 !! The cylon width (percent of total)
-*dashBoard*progressBar.cylonWidth:					20
+*dashBoard*progressBar.cylonWidth:			20
 
 !!
 !! *dockedTaskBar
 !!
-*dockedTaskBar.shadowType:								shadow_out
-*dockedTaskBar.shadowThickness:							1
-*dockedTaskBar.spacing:									0
-*dockedTaskBar.buttonLayout:							button_pixmap_only
-*dockedTaskBar*fontList:							-*-helvetica-medium-r-*-*-*-120-*-*-*-*-iso8859-2:*-r-*
+*dockedTaskBar.shadowType:				shadow_out
+*dockedTaskBar.shadowThickness:				1
+*dockedTaskBar.spacing:					0
+*dockedTaskBar.buttonLayout:				button_pixmap_only
+*dockedTaskBar*fontList:				-*-helvetica-medium-r-*-*-*-120-*-*-*-*-iso8859-2:*-r-*
 
-*dockedTaskBar*openOrBringUpBrowser.labelString:		Navigator
+*dockedTaskBar*openOrBringUpBrowser.labelString:	Navigator
 *dockedTaskBar*openInboxAndGetNewMessages.labelString:	Inbox
-*dockedTaskBar*openNewsgroups.labelString:				Grupy dyskusyjne
-*dockedTaskBar*openAddrBook.labelString:				Ksi±¿ka adresowa
-*dockedTaskBar*openEditor.labelString:					Kompozytor
+*dockedTaskBar*openNewsgroups.labelString:		Grupy dyskusyjne
+*dockedTaskBar*openAddrBook.labelString:		Ksi±¿ka adresowa
+*dockedTaskBar*openEditor.labelString:			Edytor
 
-*dockedTaskBar*openOrBringUpBrowser.tipString:			Otwórz okno przegl±darki
+*dockedTaskBar*openOrBringUpBrowser.tipString:		Otwórz okno przegl±darki
 *dockedTaskBar*openInboxAndGetNewMessages.tipString:	Otwórz okno poczty i pobierz nowe wiadomo¶ci
-*dockedTaskBar*openNewsgroups.tipString:				Otwórz centrum wiadomo¶ci
-*dockedTaskBar*openAddrBook.tipString:				Otwórz ksi±¿kê adresow±
-*dockedTaskBar*openEditor.tipString:					Otwórz edytor stron WWW
+*dockedTaskBar*openNewsgroups.tipString:		Otwórz centrum wiadomo¶ci
+*dockedTaskBar*openAddrBook.tipString:			Otwórz ksi±¿kê adresow±
+*dockedTaskBar*openEditor.tipString:			Otwórz edytor stron WWW
 
-*openInboxAndGetNewMessages.documentationString:		Otwórz okno poczty i pobierz nowe wiadomo¶ci
+*openInboxAndGetNewMessages.documentationString:	Otwórz okno poczty i pobierz nowe wiadomo¶ci
 
-*dockedTaskBar*XfeButton.marginBottom:				1
-*dockedTaskBar*XfeButton.marginLeft:				1
-*dockedTaskBar*XfeButton.marginRight:				1
-*dockedTaskBar*XfeButton.marginTop:					1
-*dockedTaskBar*XfeButton.shadowThickness:			1
+*dockedTaskBar*XfeButton.marginBottom:			1
+*dockedTaskBar*XfeButton.marginLeft:			1
+*dockedTaskBar*XfeButton.marginRight:			1
+*dockedTaskBar*XfeButton.marginTop:			1
+*dockedTaskBar*XfeButton.shadowThickness:		1
 
 !!
 !! *floatingTaskBar
 !!
-*floatingTaskBar.shadowType:								shadow_out
-*floatingTaskBar.shadowThickness:							1
-*floatingTaskBar.spacing:									0
-*floatingTaskBar*fontList:								-*-helvetica-medium-r-*-*-*-120-*-*-*-*-iso8859-2:*-r-*
+*floatingTaskBar.shadowType:				shadow_out
+*floatingTaskBar.shadowThickness:			1
+*floatingTaskBar.spacing:				0
+*floatingTaskBar*fontList:				-*-helvetica-medium-r-*-*-*-120-*-*-*-*-iso8859-2:*-r-*
 
 
 
 *floatingTaskBar*openInboxAndGetNewMessages.labelString:	Skrzynka odbiorcza
-*floatingTaskBar*openNewsgroups.labelString:				Grupy dyskusyjne
-*floatingTaskBar*openAddrBook.labelString:				Ksi±¿ka adresowa
-*floatingTaskBar*openEditor.labelString:					Kompozytor
+*floatingTaskBar*openNewsgroups.labelString:			Grupy dyskusyjne
+*floatingTaskBar*openAddrBook.labelString:			Ksi±¿ka adresowa
+*floatingTaskBar*openEditor.labelString:			Edytor
 
-*floatingTaskBar*openOrBringUpBrowser.tipString:			Otwórz okno przegl±darki
+*floatingTaskBar*openOrBringUpBrowser.tipString:	Otwórz okno przegl±darki
 *floatingTaskBar*openInboxAndGetNewMessages.tipString:	Otwórz okno poczty i pobierz nowe wiadomo¶ci
-*floatingTaskBar*openNewsgroups.tipString:				Otwórz okno poczty i grup dyskusyjnych
-*floatingTaskBar*openAddrBook.tipString:				Otwórz ksi±¿kê adresow±
-*floatingTaskBar*openEditor.tipString:					Otwórz edytor stron WWW
+*floatingTaskBar*openNewsgroups.tipString:		Otwórz okno poczty i grup dyskusyjnych
+*floatingTaskBar*openAddrBook.tipString:		Otwórz ksi±¿kê adresow±
+*floatingTaskBar*openEditor.tipString:			Otwórz edytor stron WWW
 
 
 *openInboxAndGetNewMessages.documentationString:		Otwórz okno poczty i pobierz nowe wiadomo¶ci
