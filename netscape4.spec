@@ -110,7 +110,7 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_bindir} \
 	$RPM_BUILD_ROOT%{_libdir}/netscape/{plugins,java/classes} \
 	$RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/{de,es,fr,ja,ko,pl,pt_BR,ru,zh_{CN,TW}} \
-	$RPM_BUILD_ROOT{%{_applnkdir}/Network/WWW,{_pixmapsdir}}
+	$RPM_BUILD_ROOT{%{_applnkdir}/Network/WWW,%{_pixmapsdir}}
 
 for I in *.nif; do
 	tar -C $RPM_BUILD_ROOT%{_libdir}/netscape -xzvf $I
