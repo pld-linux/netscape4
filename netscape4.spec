@@ -42,7 +42,7 @@ Netscape autorstwa Krzysztofa Szatanika <diabl0@linuxpl.org>.
 
 %package common
 Summary:	Code shared between navigator and communicator
-Summary(pl):	Pliki dzielone miêdzy navigator'em i communicator'em
+Summary(pl):	Pliki dzielone miêdzy navigatorem i communicatorem
 Group:		X11/Applications/Networking
 Group(de):	X11/Applikationen/Netzwerkwesen
 Group(pl):	X11/Aplikacje/Sieciowe
@@ -51,14 +51,14 @@ Group(pl):	X11/Aplikacje/Sieciowe
 Files shared between the Netscape Navigator and Netscape Communicator.
 web browsers.
 
-%description -l pl
+%description common -l pl
 Wspólne pliki dla przegl±darki Navigator i pakietu Communicator.
 
 %package communicator
 Summary:	Netscape Communicator internet browser, news reader, and mail client
 Summary(fr):	Netscape Communicator, navigateur Internet, lecteur de news et client courrier.
 Summary(de):	Netscape Communicator Internet Browser, Newsreader und  Mail-Client  
-Summary(pl):	Netscape Communicator - przegl±darka WWW, czytki news oraz program pocztowy
+Summary(pl):	Netscape Communicator - przegl±darka WWW, czytnik news oraz program pocztowy
 Summary(tr):	Netscape Communicator tarayýcý, haber okuyucu ve e-posta istemcisi
 Group:		X11/Applications/Networking
 Group(de):	X11/Applikationen/Netzwerkwesen
@@ -73,7 +73,7 @@ full-featured Usenet news reader as well as a complete email client.
 Information on the Netscape Communicator license may be found in the
 file %{_docdir}/%{name}-common-%{version}/LICENSE.
 
-%description -l pl
+%description communicator -l pl
 Netscape Communicator to potê¿na przegl±darka WWW. Obs³uguje najnowsze
 standardy HTML, Java i JavaScript. Zawiera tak¿e w pe³ni funkcjonalny
 czytnik grup dyskusyjnych oraz program pocztowy.
@@ -100,7 +100,7 @@ full-featured Usenet news reader as well as a complete email client.
 Information on the Netscape Navigator license may be found in the file
 %{_docdir}/%{name}-common-%{version}/LICENSE.
 
-%description -l pl
+%description navigator -l pl
 Netscape Navigator to potê¿na przegl±darka WWW. Obs³uguje najnowsze
 standardy HTML, Java i JavaScript.
 
@@ -109,7 +109,7 @@ Informacje na temat licencji mo¿na znale¼æ w pliku
 
 %prep
 %setup -c -q
-mv communic*/* .
+mv -f communic*/* .
 rmdir communicator*
 
 %install
@@ -123,9 +123,9 @@ for I in *.nif; do
 	tar -C $RPM_BUILD_ROOT%{_libdir}/netscape -xzvf $I
 done
 
-mv $RPM_BUILD_ROOT%{_libdir}/netscape/netscape $RPM_BUILD_ROOT%{_libdir}/netscape/netscape-communicator
-cp -a vreg $RPM_BUILD_ROOT%{_libdir}/netscape
-cp -a *.jar $RPM_BUILD_ROOT%{_libdir}/netscape/java/classes
+mv -f $RPM_BUILD_ROOT%{_libdir}/netscape/netscape $RPM_BUILD_ROOT%{_libdir}/netscape/netscape-communicator
+cp -af vreg $RPM_BUILD_ROOT%{_libdir}/netscape
+cp -af *.jar $RPM_BUILD_ROOT%{_libdir}/netscape/java/classes
 echo "Communicator,%_registry,%{_libdir}/netscape" > /tmp/infile
 ./vreg $RPM_BUILD_ROOT%{_libdir}/netscape/registry /tmp/infile
 rm -f /tmp/infile
@@ -150,15 +150,15 @@ install %{SOURCE17} $RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/ru/Netscape
 install %{SOURCE18} $RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/zh_CN.gb2312/Netscape
 install %{SOURCE19} $RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/zh_TW.big5/Netscape
 
-mv $RPM_BUILD_ROOT%{_libdir}/netscape/libnullplugin-dynMotif.so \
+mv -f $RPM_BUILD_ROOT%{_libdir}/netscape/libnullplugin-dynMotif.so \
    $RPM_BUILD_ROOT%{_libdir}/netscape/plugins
 
-ln -s ../lib/netscape/netscape-navigator $RPM_BUILD_ROOT%{_bindir}/netscape-navigator
-ln -s ../lib/netscape/netscape-communicator $RPM_BUILD_ROOT%{_bindir}/netscape-communicator
+ln -sf ../lib/netscape/netscape-navigator $RPM_BUILD_ROOT%{_bindir}/netscape-navigator
+ln -sf ../lib/netscape/netscape-communicator $RPM_BUILD_ROOT%{_bindir}/netscape-communicator
 
-mv $RPM_BUILD_ROOT%{_libdir}/netscape/{README,LICENSE} \
+mv -f $RPM_BUILD_ROOT%{_libdir}/netscape/{README,LICENSE} \
 	$RPM_BUILD_DIR/%{name}-%{version}/
-mv $RPM_BUILD_ROOT%{_libdir}/netscape/Netscape.ad \
+mv -f $RPM_BUILD_ROOT%{_libdir}/netscape/Netscape.ad \
 	$RPM_BUILD_ROOT%{_libdir}/X11/app-defaults/Netscape
 
 %clean
