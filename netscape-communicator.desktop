@@ -1,7 +1,10 @@
 [Desktop Entry]
 Name=Netscape Communicator
+Name[ja]=ネットスケープコミュニケータ
 Comment=Netscape Communicator World Wide Web Browser, E-mail and News client
+Comment[ja]=ネットスケープコミュミケータ - Webブラウザ、電子メールとニュースのクライアント
 Comment[pl]=Netscape Communicator: przeglądarka WWW, program pocztowy i do obsługi news
+Comment[sv]=Netscape Communicator - Webbläsare, e-postklient och diskussionsgruppsprogram
 Exec=/usr/X11R6/bin/netscape -COMMUNICATOR
 Icon=netscape.png
 Terminal=0
