@@ -12,7 +12,7 @@ Source2:	netscape.sh
 #Source4:	netscape-communicator.wmconfig
 #Source5:	netscape-navigator.wmconfig
 Exclusivearch:	%{ix86}
-Buildroot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Netscape navigator and communicator.
