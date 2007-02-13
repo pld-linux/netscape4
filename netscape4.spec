@@ -1,7 +1,7 @@
 Summary:	Netscape Navigator and Communicator
-Summary(pl.UTF-8):   Netscape Navigator i Communicator
-Summary(ru.UTF-8):   Netscape Navigator и Communicator
-Summary(uk.UTF-8):   Netscape Navigator та Communicator
+Summary(pl.UTF-8):	Netscape Navigator i Communicator
+Summary(ru.UTF-8):	Netscape Navigator и Communicator
+Summary(uk.UTF-8):	Netscape Navigator та Communicator
 Name:		netscape4
 Version:	4.8
 %define _shortver 48
@@ -52,25 +52,25 @@ Netscape navigator та communicator
 
 %package common
 Summary:	Files shared by Netscape Navigator and Communicator
-Summary(cs.UTF-8):   Společné soubory pro Netscape Navigator a Netscape Communicator
-Summary(da.UTF-8):   Filer delt af Netscape Navigator og Communicator
-Summary(de.UTF-8):   Dateien, die von Netscape Navigator und Communicator gemeinsam verwendet werden
-Summary(es.UTF-8):   Ficheros comunes a Netscape Navigator y Communicator
-Summary(fr.UTF-8):   Fichiers partagés par Netscape Navigator et Communicator
-Summary(id.UTF-8):   File-file yang dipakai bersama oleh Netscape Navigator dan Communicator
-Summary(is.UTF-8):   Skrár sem bæði Netscape Navigator og Communicator nota
-Summary(it.UTF-8):   File condivisi da Netscape Navigator e da Communicator
-Summary(ja.UTF-8):   Netscape Navigator と Communicator の間で共有されるファイル
-Summary(ko.UTF-8):   Netscape Navigator 와 Communicator 에 의해 공유되는 파일들
-Summary(nb.UTF-8):   Filer som deles av Netscape Navigator og Communicator
-Summary(pl.UTF-8):   Pliki wspólne dla Netscape Navigatora i Communicatora
-Summary(pt.UTF-8):   Ficheiros partilhados pelo Netscape Navigator e pelo Communicator
-Summary(ru.UTF-8):   Общие файлы для Netscape Navigator и Communicator
-Summary(sk.UTF-8):   Súbory používané Netscape Navigator-om aj Communicator-om
-Summary(sl.UTF-8):   Datoteke, ki si jih delita Netscape Navigator in Communicator
-Summary(sv.UTF-8):   Filer delade av Netscape Navigator och Communicator
-Summary(uk.UTF-8):   Спільний код для навігатора та комунікатора
-Summary(zh_CN.UTF-8):   Netscape Navigator 和 Communicator 共享的文件。
+Summary(cs.UTF-8):	Společné soubory pro Netscape Navigator a Netscape Communicator
+Summary(da.UTF-8):	Filer delt af Netscape Navigator og Communicator
+Summary(de.UTF-8):	Dateien, die von Netscape Navigator und Communicator gemeinsam verwendet werden
+Summary(es.UTF-8):	Ficheros comunes a Netscape Navigator y Communicator
+Summary(fr.UTF-8):	Fichiers partagés par Netscape Navigator et Communicator
+Summary(id.UTF-8):	File-file yang dipakai bersama oleh Netscape Navigator dan Communicator
+Summary(is.UTF-8):	Skrár sem bæði Netscape Navigator og Communicator nota
+Summary(it.UTF-8):	File condivisi da Netscape Navigator e da Communicator
+Summary(ja.UTF-8):	Netscape Navigator と Communicator の間で共有されるファイル
+Summary(ko.UTF-8):	Netscape Navigator 와 Communicator 에 의해 공유되는 파일들
+Summary(nb.UTF-8):	Filer som deles av Netscape Navigator og Communicator
+Summary(pl.UTF-8):	Pliki wspólne dla Netscape Navigatora i Communicatora
+Summary(pt.UTF-8):	Ficheiros partilhados pelo Netscape Navigator e pelo Communicator
+Summary(ru.UTF-8):	Общие файлы для Netscape Navigator и Communicator
+Summary(sk.UTF-8):	Súbory používané Netscape Navigator-om aj Communicator-om
+Summary(sl.UTF-8):	Datoteke, ki si jih delita Netscape Navigator in Communicator
+Summary(sv.UTF-8):	Filer delade av Netscape Navigator och Communicator
+Summary(uk.UTF-8):	Спільний код для навігатора та комунікатора
+Summary(zh_CN.UTF-8):	Netscape Navigator 和 Communicator 共享的文件。
 Group:		X11/Applications/Networking
 
 %description common
@@ -169,22 +169,22 @@ Communicator'ом.
 
 %package communicator
 Summary:	Netscape Communicator internet browser, news reader, and mail client
-Summary(cs.UTF-8):   WWW prohlížeč Netscape Communicator, poštovní a NetNews klient
-Summary(de.UTF-8):   Netscape Communicator Internet Browser, Newsreader und Mail-Client
-Summary(es.UTF-8):   Juego de herramientas Netscape Communicator
-Summary(fr.UTF-8):   Netscape Communicator, navigateur Internet, lecteur de news et client courrier
-Summary(it.UTF-8):   Gamma di tool di Netscape Communicator
-Summary(ja.UTF-8):   Netscape Communicator ツールセット
-Summary(ko.UTF-8):   도구들의 Netscape Communicator 수트
-Summary(pl.UTF-8):   Netscape Communicator - przeglądarka WWW, czytnik news oraz program pocztowy
-Summary(pt.UTF-8):   O conjunto de ferramentas Netscape Communicator
-Summary(ru.UTF-8):   Netscape Communicator - броузер, ньюсридер и почтовый клиент
-Summary(sk.UTF-8):   WWW prehliadač Netscape Navigator
-Summary(sl.UTF-8):   Zbirka spletnih orodij Netscape Communicator
-Summary(sv.UTF-8):   Verktygssviten Netscape Communicator
-Summary(tr.UTF-8):   Netscape Communicator tarayıcı, haber okuyucu ve e-posta istemcisi
-Summary(uk.UTF-8):   Netscape Communicator - броузер, ньюсрідер та поштовий клієнт
-Summary(zh_CN.UTF-8):   Netscape Communicator 的工具套。
+Summary(cs.UTF-8):	WWW prohlížeč Netscape Communicator, poštovní a NetNews klient
+Summary(de.UTF-8):	Netscape Communicator Internet Browser, Newsreader und Mail-Client
+Summary(es.UTF-8):	Juego de herramientas Netscape Communicator
+Summary(fr.UTF-8):	Netscape Communicator, navigateur Internet, lecteur de news et client courrier
+Summary(it.UTF-8):	Gamma di tool di Netscape Communicator
+Summary(ja.UTF-8):	Netscape Communicator ツールセット
+Summary(ko.UTF-8):	도구들의 Netscape Communicator 수트
+Summary(pl.UTF-8):	Netscape Communicator - przeglądarka WWW, czytnik news oraz program pocztowy
+Summary(pt.UTF-8):	O conjunto de ferramentas Netscape Communicator
+Summary(ru.UTF-8):	Netscape Communicator - броузер, ньюсридер и почтовый клиент
+Summary(sk.UTF-8):	WWW prehliadač Netscape Navigator
+Summary(sl.UTF-8):	Zbirka spletnih orodij Netscape Communicator
+Summary(sv.UTF-8):	Verktygssviten Netscape Communicator
+Summary(tr.UTF-8):	Netscape Communicator tarayıcı, haber okuyucu ve e-posta istemcisi
+Summary(uk.UTF-8):	Netscape Communicator - броузер, ньюсрідер та поштовий клієнт
+Summary(zh_CN.UTF-8):	Netscape Communicator 的工具套。
 Group:		X11/Applications/Networking
 Requires:	netscape4-common
 
@@ -265,26 +265,26 @@ Netscape 工具，包括 Web 浏览器、新闻阅读程序和电子邮件客户
 
 %package navigator
 Summary:	The Netscape Navigator Web browser
-Summary(cs.UTF-8):   WWW prohlížeč Netscape Navigator
-Summary(da.UTF-8):   Web-læseren Netscape Navigator
-Summary(de.UTF-8):   Der Web-Browser Netscape Navigator
-Summary(es.UTF-8):   El navegador Web Netscape Navigator
-Summary(fr.UTF-8):   Navigateur Web Netscape Navigator
-Summary(id.UTF-8):   Browser Web Netscape Navigator
-Summary(is.UTF-8):   Vefráparinn Netscape Navigator
-Summary(it.UTF-8):   Browser Web Netscape Navigator
-Summary(ja.UTF-8):   Netscape Navigator Web ブラウザ
-Summary(ko.UTF-8):   Netscape Navigator 웹 브라우저
-Summary(nb.UTF-8):   Web-leseren Netscape Navigator
-Summary(pl.UTF-8):   Netscape Navigator - przeglądarka WWW
-Summary(pt.UTF-8):   O navegador Web Netscape Navigator
-Summary(ru.UTF-8):   Netscape Navigator - броузер Интернет
-Summary(sk.UTF-8):   WWW prehliadač Netscape Navigator
-Summary(sl.UTF-8):   Spletni brkljalnik Netscape Navigator
-Summary(sv.UTF-8):   Webbläsaren Netscape Navigator
-Summary(tr.UTF-8):   Netscape Navigator web tarayıcı
-Summary(uk.UTF-8):   Netscape Navigator - броузер Інтернет
-Summary(zh_CN.UTF-8):   Netscape Navigator 网页浏览器。
+Summary(cs.UTF-8):	WWW prohlížeč Netscape Navigator
+Summary(da.UTF-8):	Web-læseren Netscape Navigator
+Summary(de.UTF-8):	Der Web-Browser Netscape Navigator
+Summary(es.UTF-8):	El navegador Web Netscape Navigator
+Summary(fr.UTF-8):	Navigateur Web Netscape Navigator
+Summary(id.UTF-8):	Browser Web Netscape Navigator
+Summary(is.UTF-8):	Vefráparinn Netscape Navigator
+Summary(it.UTF-8):	Browser Web Netscape Navigator
+Summary(ja.UTF-8):	Netscape Navigator Web ブラウザ
+Summary(ko.UTF-8):	Netscape Navigator 웹 브라우저
+Summary(nb.UTF-8):	Web-leseren Netscape Navigator
+Summary(pl.UTF-8):	Netscape Navigator - przeglądarka WWW
+Summary(pt.UTF-8):	O navegador Web Netscape Navigator
+Summary(ru.UTF-8):	Netscape Navigator - броузер Интернет
+Summary(sk.UTF-8):	WWW prehliadač Netscape Navigator
+Summary(sl.UTF-8):	Spletni brkljalnik Netscape Navigator
+Summary(sv.UTF-8):	Webbläsaren Netscape Navigator
+Summary(tr.UTF-8):	Netscape Navigator web tarayıcı
+Summary(uk.UTF-8):	Netscape Navigator - броузер Інтернет
+Summary(zh_CN.UTF-8):	Netscape Navigator 网页浏览器。
 Group:		X11/Applications/Networking
 Requires:	netscape4-common
 
